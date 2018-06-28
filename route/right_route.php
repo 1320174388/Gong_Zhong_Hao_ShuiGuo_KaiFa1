@@ -11,7 +11,7 @@
 // +---------------------------------------------------
 // : 权限管理：用户申请管理员
 // +---------------------------------------------------
-Route::rule(
+Route::post(
     '/right_module/apply_route',
     'right_module/v1.controller.ApplyController/applyInit'
 );
