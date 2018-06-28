@@ -8,6 +8,7 @@
  *  历史记录 :  -----------------------
  */
 namespace app\right_module\working_version\v1\controller;
+use app\right_module\working_version\v1\service\ApplyService;
 use think\Controller;
 use think\Request;
 
@@ -17,15 +18,18 @@ class ApplyController extends Controller
      * 名  称 : applyInit()
      * 功  能 : 执行用户申请管理员操作
      * 变  量 : --------------------------------------
-     * 输  入 : (int) $applyName     => '用户名';
-     * 输  入 : (str) $applyPassward => '密码';
-     * 输  入 : (int) $applyPhone    => '手机号';
+     * 输  入 : (str) $post['applyName']       => '用户名';
+     * 输  入 : (str) $post['applyPassward']   => '申请密码';
+     * 输  入 : (str) $post['applyRePassword'] => '申请密码';
+     * 输  入 : (str) $post['applyPhone']      => '手机号';
      * 输  出 : --------------------------------------
      * 创  建 : 2018/06/57 15:57
      */
     public function applyInit(Request $request)
     {
-        // 验证传值数据
-        $post = $request->post();
+        // 引入Service数据逻辑
+        $value = (new ApplyService())->applyAdd($request->post());
+        // 验证数据
+        if($value) return false; else return true;
     }
 }

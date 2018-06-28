@@ -9,7 +9,31 @@
  */
 namespace app\right_module\working_version\v1\service;
 
+use app\right_module\working_version\v1\dao\ApplyDao;
+
 class ApplyService
 {
-
+    /**
+     * 名  称 : applyAdd()
+     * 功  能 : 执行用户申请管理员操作
+     * 变  量 : --------------------------------------
+     * 输  入 : (int) $applyName     => '用户名';
+     * 输  入 : (str) $applyPassward => '密码';
+     * 输  入 : (int) $applyPhone    => '手机号';
+     * 输  出 : --------------------------------------
+     * 创  建 : 2018/06/57 15:57
+     */
+    public function applyAdd($applyName,$applyPassward,$applyPhone)
+    {
+        // 执行数据写入
+        $res = (new ApplyDao())->applyCreate(
+            $applyName,
+            $applyPassward,
+            $applyPhone
+        );
+        // 验证数据
+        if($res) return returnData('error');
+        // 返回数据
+        return returnData('success',true);
+    }
 }
