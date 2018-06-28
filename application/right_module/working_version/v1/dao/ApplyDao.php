@@ -39,9 +39,9 @@ class ApplyDao implements ApplyInterface
 		$res = $ApplyModel->save();
 		// 验证数据
 		if(!$res){
-			returnData('error',false);
+			return returnData('error',false);
 		}
-		returnData('success',true);
+		return returnData('success',true);
 	}
 
 	/**
@@ -61,18 +61,14 @@ class ApplyDao implements ApplyInterface
 		// 如果$applyToken为空字符串,就查询所有
 		if($applyToken==''){
 			$user = $ApplyModel->select();
-			// 验证数据
-			if(!$user){
-				return ['msg'=>'error','data'=>false];
-			}
-			return ['msg'=>'error','data'=>$user];
+		}else{
+			// 不为空字符串,就查询单条传过来的数据
+			$user = $ApplyModel->where('applyToken',$applyToken)->find();
 		}
-		// 不为空字符串,就查询单条传过来的数据
-		$user = $ApplyModel->where('applyToken',$applyToken)->find();
 		// 验证数据
 		if(!$user){
-			returnData('error',false);
+			return returnData('error',false);
 		}
-		returnData('success',$user);
+		return returnData('success',$user);
 	}
 }
