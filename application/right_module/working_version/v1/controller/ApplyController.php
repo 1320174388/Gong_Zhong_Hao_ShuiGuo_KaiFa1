@@ -30,6 +30,7 @@ class ApplyController extends Controller
         // 引入Service数据逻辑
         $res = (new ApplyService())->applyAdd($request->post());
         // 验证数据
-        if(!$res) return var_dump(false); else return var_dump(true);
+        if(!$res) return var_dump(false);
+        else return var_dump(true);
     }
 }
