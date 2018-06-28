@@ -29,12 +29,16 @@ class ApplyDao implements ApplyInterface
 	{
 		// 实例化用户申请model
 		$ApplyModel = new ApplyModel;
+		// 自动生成管理员身份验证
+		$ApplyModel->apply_token     = righeToken();
 		// 获取用户申请的用户名
-		$ApplyModel->applyName     = $applyName;
+		$ApplyModel->apply_name     = $applyName;
 		// 获取用户申请的密码
-		$ApplyModel->applyPassward = $applyPassward;
+		$ApplyModel->apply_passward = $applyPassward;
 		// 获取用户申请的手机号
-		$ApplyModel->applyPhone    = $applyPhone;
+		$ApplyModel->apply_phone    = $applyPhone;
+		// 用户申请时间
+		$ApplyModel->apply_time	   = time();
 		// 保存数据库
 		$res = $ApplyModel->save();
 		// 验证数据

@@ -28,8 +28,8 @@ class ApplyController extends Controller
     public function applyInit(Request $request)
     {
         // 引入Service数据逻辑
-        $value = (new ApplyService())->applyAdd($request->post());
+        $res = (new ApplyService())->applyAdd($request->post());
         // 验证数据
-        if($value) return false; else return true;
+        if(!$res) return var_dump(false); else return var_dump(true);
     }
 }
