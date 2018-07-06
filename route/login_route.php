@@ -8,9 +8,14 @@
  *  历史记录 :  -----------------------
  */
 // +----------------------------------
-// : 测试接口
+// : 传值方式：GET  ，功能：初始化接口
+// : 传值方式：GET  ，功能：执行登录接口
 // +----------------------------------
 Route::get(
     '/login_module/login_route',
+    'login_module/v1.controller.LoginController/loginRoute'
+);
+Route::get(
+    '/login_module/login_init',
     'login_module/v1.controller.LoginController/loginInit'
 );
