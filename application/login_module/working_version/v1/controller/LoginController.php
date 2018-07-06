@@ -50,8 +50,8 @@ class LoginController extends Controller
     public function  loginInit(Request $request)
     {
         //
-        $token = (new LoginLibrary())->loginLibrary($request->get('code'));
+        $token = (new LoginLibrary())->loginLibrary($request->get('openid'));
         // 显示页面
-        return "<h1>{}</h1>";
+        return "<h1>{$token}</h1>";
     }
 }

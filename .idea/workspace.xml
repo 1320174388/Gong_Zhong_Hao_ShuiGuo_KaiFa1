@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dad74ad-cb04-45ca-a24d-4d5a3e7fca69" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/application/login_module/working_version/v1/controller/LoginController.php" afterPath="$PROJECT_DIR$/application/login_module/working_version/v1/controller/LoginController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/login_module/working_version/v1/controller/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="54" column="21" lean-forward="false" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+            <state relative-caret-position="576">
+              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
               <folding>
                 <element signature="e#6#179#0#PHP" expanded="true" />
                 <element signature="e#238#259#0#PHP" expanded="true" />
@@ -191,12 +190,12 @@
       <workItem from="1530170780918" duration="7609000" />
       <workItem from="1530322682046" duration="6498000" />
       <workItem from="1530346962696" duration="1430000" />
-      <workItem from="1530873093255" duration="4742000" />
+      <workItem from="1530873093255" duration="4858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22858000" />
+    <option name="totallyTimeSpent" value="22974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -347,8 +346,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/login_module/working_version/v1/controller/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="54" column="21" lean-forward="false" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        <state relative-caret-position="576">
+          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding>
             <element signature="e#6#179#0#PHP" expanded="true" />
             <element signature="e#238#259#0#PHP" expanded="true" />
