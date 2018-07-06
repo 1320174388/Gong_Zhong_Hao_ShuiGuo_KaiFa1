@@ -12,5 +12,5 @@
 // +----------------------------------
 Route::get(
     '/login_module/login_route',
-    'login_module/v1.controller.LoginController/loginCeshi'
+    'login_module/v1.controller.LoginController/loginInit'
 );
