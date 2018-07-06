@@ -22,7 +22,7 @@ class LoginController extends Controller
      */
     public function  loginCeshi()
     {
-        $route = urlencode('http://gongzhonghaokaifa1.dlaotianhuang.com/login_module/login_route');
+        $route = urlencode('https://gongzhonghaokaifa1.dlaotianhuang.com/login_module/login_route');
         $url = 'https://open.weixin.qq.com/connect/oauth2/authorize';
         $url.= '?appid=wx0b50c8199226b3eb';
         $url.= '&redirect_uri='.$route;
