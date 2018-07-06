@@ -28,6 +28,7 @@ class LoginController extends Controller
         $url.= '&redirect_uri='.$route;
         $url.= '&response_type=code&scope=snsapi_userinfo';
         $url.= '&state=STATE#wechat_redirect';
-        return header("location:http://baidu.com");
+
+        return '<script>document.location="http://www.baidu.com"</script>';
     }
 }
