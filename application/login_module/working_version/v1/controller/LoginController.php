@@ -52,6 +52,6 @@ class LoginController extends Controller
         //
         $token = (new LoginLibrary())->loginLibrary($request->get('code'));
         // 显示页面
-        return "<h3>{}</h3>";
+        return "<h3>{$token}</h3>";
     }
 }
