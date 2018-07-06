@@ -26,7 +26,7 @@ class LoginController extends Controller
         $url = 'https://open.weixin.qq.com/connect/oauth2/authorize';
         $url.= '?appid=wx0b50c8199226b3eb';
         $url.= '&redirect_uri='.$route;
-        $url.= '&response_type=code&scope=snsapi_base';
+        $url.= '&response_type=code&scope=snsapi_userinfo';
         $url.= '&state=STATE#wechat_redirect';
         return '<a href="'.$url.'">'.$url.'</a>';
     }
