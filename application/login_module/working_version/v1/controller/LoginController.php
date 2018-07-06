@@ -36,7 +36,7 @@ class LoginController extends Controller
         $url.= '&response_type=code&scope=snsapi_base';
         $url.= '&state=STATE#wechat_redirect';
         // 跳转公众号登录页面
-        header('Location: '.$url);
+        return '<script>document.location="'.$url.'"</script>';
     }
 
     /**
