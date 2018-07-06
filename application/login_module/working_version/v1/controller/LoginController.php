@@ -10,7 +10,7 @@
 namespace app\login_module\working_version\v1\controller;
 use think\Controller;
 use think\Request;
-
+use app\login_module\working_version\v1\library\LoginLibrary;
 class LoginController extends Controller
 {
     /**
@@ -49,14 +49,9 @@ class LoginController extends Controller
      */
     public function  loginInit(Request $request)
     {
-        // 通过code换取网页授权access_token
-        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token';
-        $url.= '?appid='.config('v1_config.AppID');
-        $url.= '&secret='.config('v1_config.AppSecret');
-        $url.= '&code='.$request->get('code');
-        $url.= '&grant_type=authorization_code';
-
+        //
+        $token = (new LoginLibrary())->loginLibrary($request->get('code'));
         // 显示页面
-        return "<h1>{$request->get('code')}</h1>";
+        return "<h1>{$token}</h1>";
     }
 }
