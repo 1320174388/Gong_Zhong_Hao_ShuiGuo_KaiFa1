@@ -15,9 +15,9 @@ class LoginController extends Controller
 {
     /**
      * 名  称 : loginRoute()
-     * 功  能 : 公众号登录接口
+     * 功  能 : 公众号初始化接口
      * 变  量 : --------------------------------------
-     * 输  入 : (String)
+     * 输  入 : --------------------------------------
      * 输  出 : --------------------------------------
      * 创  建 : 2018/07/06 09:31
      */
@@ -31,24 +31,32 @@ class LoginController extends Controller
         $route = urlencode($projectUrl);
         // 拼接公众号登录地址
         $url = 'https://open.weixin.qq.com/connect/oauth2/authorize';
-        $url.= '?appid=wx0b50c8199226b3eb';
+        $url.= '?appid='.config('v1_config.AppID');
         $url.= '&redirect_uri='.$route;
         $url.= '&response_type=code&scope=snsapi_base';
         $url.= '&state=STATE#wechat_redirect';
         // 跳转公众号登录页面
-        return '<script>document.location="'.$url.'"</script>';
+        header('Location: '.$url);
     }
 
     /**
      * 名  称 : loginInit()
-     * 功  能 : 公众号登录接口
+     * 功  能 : 通过code换取网页授权access_token，显示首页
      * 变  量 : --------------------------------------
-     * 输  入 : (String)
+     * 输  入 : (String) $code => '用户登录凭证code';
      * 输  出 : --------------------------------------
      * 创  建 : 2018/07/06 09:31
      */
     public function  loginInit(Request $request)
     {
+        // 通过code换取网页授权access_token
+        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token';
+        $url.= '?appid='.config('v1_config.AppID');
+        $url.= '&secret='.config('v1_config.AppSecret');
+        $url.= '&code='.$request->get('code');
+        $url.= '&grant_type=authorization_code';
+
+        // 显示页面
         return "<h1>{$request->get('code')}</h1>";
     }
 }
