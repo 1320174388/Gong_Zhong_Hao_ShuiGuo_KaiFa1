@@ -13,19 +13,21 @@ use think\Controller;
 class LoginController extends Controller
 {
     /**
-     * 名  称 : loginInit()
-     * 功  能 : 暂时保留方法
+     * 名  称 : loginCeshi()
+     * 功  能 : 公众号测试接口
      * 变  量 : --------------------------------------
      * 输  入 : (String)
      * 输  出 : --------------------------------------
      * 创  建 : 2018/07/06 09:31
      */
-    public function  loginInit()
+    public function  loginCeshi()
     {
-
+        $route = urlencode('gongzhonghaokaifa1.dlaotianhuang.com/login_module/login_route');
+        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize';
+        $url.= '?appid=wx0b50c8199226b3eb';
+        $url.= '&redirect_uri='.$route;
+        $url.= '&response_type=code&scope=snsapi_base';
+        $url.= '&state=STATE#wechat_redirect';
+        return '<a href="'.$url.'">'.$url.'</a>';
     }
-
-    /**
-     *
-     */
 }
