@@ -26,8 +26,8 @@
       <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/login_module/working_version/v1/controller/LoginController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+            <state relative-caret-position="541">
+              <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
               <folding>
                 <element signature="e#6#179#0#PHP" expanded="true" />
                 <element signature="e#238#259#0#PHP" expanded="true" />
@@ -39,8 +39,8 @@
       <file leaf-file-name="LoginLibrary.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/login_module/working_version/v1/library/LoginLibrary.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+            <state relative-caret-position="525">
+              <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="38" />
               <folding>
                 <element signature="e#6#189#0#PHP" expanded="true" />
               </folding>
@@ -190,12 +190,12 @@
       <workItem from="1530170780918" duration="7609000" />
       <workItem from="1530322682046" duration="6498000" />
       <workItem from="1530346962696" duration="1430000" />
-      <workItem from="1530873093255" duration="4858000" />
+      <workItem from="1530873093255" duration="5150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22974000" />
+    <option name="totallyTimeSpent" value="23266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -336,8 +336,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/login_module/working_version/v1/library/LoginLibrary.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        <state relative-caret-position="525">
+          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="38" />
           <folding>
             <element signature="e#6#189#0#PHP" expanded="true" />
           </folding>
@@ -346,8 +346,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/login_module/working_version/v1/controller/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="541">
+          <caret line="54" column="19" lean-forward="false" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
           <folding>
             <element signature="e#6#179#0#PHP" expanded="true" />
             <element signature="e#238#259#0#PHP" expanded="true" />
