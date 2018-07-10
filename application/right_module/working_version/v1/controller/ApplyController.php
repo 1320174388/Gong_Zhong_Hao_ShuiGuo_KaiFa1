@@ -8,10 +8,11 @@
  *  历史记录 :  -----------------------
  */
 namespace app\right_module\working_version\v1\controller;
-use app\right_module\working_version\v1\service\ApplyService;
-use app\right_module\working_version\v1\validator\ApplyValidate;
 use think\Controller;
 use think\Request;
+use app\right_module\working_version\v1\service\ApplyService;
+use app\right_module\working_version\v1\validator\ApplyValidate;
+use app\right_module\working_version\v1\library\qcloudSmsLibrary;
 
 class ApplyController extends Controller
 {
@@ -52,6 +53,15 @@ class ApplyController extends Controller
      */
     public function applyCode()
     {
-        return 123;
+        $phoneNumber = '手机号';
+        $textMessage = '您在中春果业平台做了申请管理员操作，验证码：';
+        $textMessage.= mt_rand(111111,999999);
+        $textMessage.= '，请于5分钟之内填写。如非本人操作，请忽略本条短信。';
+        $res = (new qcloudSmsLibrary())->sendMessige(
+            $phoneNumber,
+            $textMessage
+        );
+        if($res['msg']=='error') return print_r($res['data']);
+        return print_r($res['data']);
     }
 }
