@@ -9,9 +9,14 @@
  */
 
 // +---------------------------------------------------
-// : 权限管理：用户申请管理员
+// : 传值方式：POST，功能：权限管理，用户申请管理员
+// : 传值方式：get， 功能：权限管理，给用户发生管理员申请验证码
 // +---------------------------------------------------
 Route::post(
     '/right_module/apply_route',
     'right_module/v1.controller.ApplyController/applyInit'
+);
+Route::get(
+    '/right_module/apply_code',
+    'right_module/v1.controller.ApplyController/applyCode'
 );

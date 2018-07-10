@@ -28,10 +28,30 @@ class ApplyController extends Controller
      */
     public function applyInit(Request $request)
     {
+        // 引入Validate数据验证器
+        $validate = new ApplyValidate();
+        // 验证数据
+        if (!$validate->check($request->post()))
+        {
+            return $validate->getError();
+        }
         // 引入Service数据逻辑
         $res = (new ApplyService())->applyAdd($request->post());
         // 验证数据
         if(!$res) return var_dump(false);
         else return var_dump(true);
+    }
+
+    /**
+     * 名  称 : applyCode()
+     * 功  能 : 给用户发送验证码
+     * 变  量 : --------------------------------------
+     * 输  入 : (String)
+     * 输  出 : --------------------------------------
+     * 创  建 : 2018/07/10 10:54
+     */
+    public function applyCode()
+    {
+        return 123;
     }
 }

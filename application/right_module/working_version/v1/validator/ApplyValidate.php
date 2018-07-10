@@ -24,7 +24,21 @@ class ApplyValidate extends Validate
     protected $rule = [
         'applyName'       =>  'require|max:6',
         'applyPassward'   =>  'require|min:6|max:18',
-        'applyRePassword' =>  'require|min:6|max:18',
+        'applyRePassword' =>  'require|confirm:applyPassward',
         'applyPhone'      =>  'require|min:11|max:11',
+    ];
+    /**
+     * 名  称 : $message => '静态属性'
+     * 功  能 : 定义错误返回信息
+     * 创  建 : 2018/06/57 15:57
+     */
+    protected $message  =   [
+        'applyName.require'       => '请输入用户名称',
+        'applyName.max'           => '用户名输入过长',
+        'applyPassward.require'   => '请输入密码',
+        'applyPassward.min'       => '密码不能少于6位',
+        'applyPassward.max'       => '密码输入过长',
+        'applyRePassword.require' => '请确认密码',
+        'applyRePassword.confirm' => '两次输入密码不一致',
     ];
 }
