@@ -49,9 +49,9 @@ class LoginController extends Controller
      */
     public function  loginInit(Request $request)
     {
-        //
+        // 通过code换取网页授权access_token显示首页
         $token = (new LoginLibrary())->loginLibrary($request->get('code'));
         // 显示页面
-        return "<h3>{$token}</h3>";
+        return "<h3>{$token['data']}</h3>";
     }
 }

@@ -16,7 +16,7 @@ class LoginLibrary
      * 功  能 : 通过code换取网页授权access_token，显示首页
      * 变  量 : --------------------------------------
      * 输  入 : (String) $code => '用户登录凭证code';
-     * 输  出 : --------------------------------------
+     * 输  出 : [ 'msg' => 'success', 'data' => $token ]
      * 创  建 : 2018/07/06 09:31
      */
     public function loginLibrary($code)
@@ -30,11 +30,19 @@ class LoginLibrary
 
         // curl发送换取access_token
         $token = $this->curlPost($access);
-
-        return $token;
+        // 返回相应数据
+        return returnData('success',$token['data']);
 
     }
 
+    /**
+     * 名  称 : curlPost()
+     * 功  能 : 通过curl换取网页授权access_token
+     * 变  量 : --------------------------------------
+     * 输  入 : (String) $code => '用户登录凭证code';
+     * 输  出 : [ 'msg' => 'success', 'data' => $output ]
+     * 创  建 : 2018/07/06 20:06
+     */
     private function curlPost($access,$post_data = [])
     {
         $ch = curl_init();
@@ -48,6 +56,7 @@ class LoginLibrary
         $output = curl_exec($ch);
         curl_close($ch);
 
-        return $output;
+        // 返回相应数据
+        return returnData('success',$output);
     }
 }
