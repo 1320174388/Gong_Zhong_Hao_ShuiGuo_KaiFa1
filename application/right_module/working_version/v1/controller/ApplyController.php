@@ -9,6 +9,7 @@
  */
 namespace app\right_module\working_version\v1\controller;
 use app\right_module\working_version\v1\service\ApplyService;
+use app\right_module\working_version\v1\validator\ApplyValidate;
 use think\Controller;
 use think\Request;
 
