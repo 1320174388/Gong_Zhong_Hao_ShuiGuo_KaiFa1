@@ -11,7 +11,7 @@ namespace app\right_module\working_version\v1\controller;
 use think\Controller;
 use think\Request;
 use app\right_module\working_version\v1\library\qcloudSmsLibrary;
-
+use app\right_module\working_version\v1\validator\ResetRValidator;
 class ResetController extends Controller
 {
     /**
@@ -52,7 +52,7 @@ class ResetController extends Controller
 
     /**
      * 名  称 : resetPassword()
-     * 功  能 : 用户充值密码接口
+     * 功  能 : 用户重置密码接口
      * 变  量 : --------------------------------------
      * 输  入 : (String)
      * 输  出 : --------------------------------------
@@ -60,6 +60,6 @@ class ResetController extends Controller
      */
     public function resetPassword()
     {
-        
+        $validate = new ResetRValidator();
     }
 }
