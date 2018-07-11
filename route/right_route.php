@@ -16,22 +16,43 @@
 // : 传值方式：PUT， 功能：权限管理，管理员修改密码接口
 // +---------------------------------------------------
 Route::post(
-    '/right_module/apply_route',
+    'v1/right_module/apply_route',
     'right_module/v1.controller.ApplyController/applyInit'
 );
 Route::get(
-    '/right_module/apply_code',
+    'v1/right_module/apply_code',
     'right_module/v1.controller.ApplyController/applyCode'
 );
 Route::get(
-    '/right_module/judge_phone',
+    'v1/right_module/judge_phone',
     'right_module/v1.controller.ResetController/judgePhone'
 );
 Route::get(
-    '/right_module/reset_code',
+    'v1/right_module/reset_code',
     'right_module/v1.controller.ResetController/resetCode'
 );
 Route::put(
-    '/right_module/reset_password',
+    'v1/right_module/reset_password',
     'right_module/v1.controller.ResetController/resetPassword'
 );
+// +---------------------------------------------
+// : 后台接口
+// +---------------------------------------------
+Route::group('v1/right_module/', function(){
+    /**
+     * 传值方式：GET， 功能：获取管理员可管理权限接口
+     * 传值方式：GET， 功能：获取所有权限管理列表数据
+     */
+    Route::get(
+        'obtain_module/:token',
+        'right_module/v1.controller.ModuleController/obtainModule'
+    );
+    /**
+     * 传值方式：GET， 功能：获取管理员可管理权限接口
+     * 传值方式：GET， 功能：获取所有权限管理列表数据
+     */
+    Route::get(
+        'right_list/:token',
+        'right_module/v1.controller.RightController/rightList'
+    );
+});
