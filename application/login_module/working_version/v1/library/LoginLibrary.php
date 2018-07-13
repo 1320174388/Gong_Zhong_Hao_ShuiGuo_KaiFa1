@@ -35,23 +35,18 @@ class LoginLibrary
         // 获取数据库数据
         $data = (new LoginDao())->loginSelect($wxArray);
         // 判断是否有数据
-        if($data['msg']=='success')
-        {
+        if($data['msg']=='success'){
             // 修改access_token
             $res = (new LoginDao())->loginUpdate($wxArray);
-            // 验证数据
-            if($res['msg']=='error') return returnData('error');
-        }
-        else
-        {
+        } else {
             // 保存access_token
             $res = (new LoginDao())->loginCreate($wxArray);
-            // 验证数据
-            if($res['msg']=='error') return returnData('error');
         }
+        // 验证数据
+        if($res['msg']=='error') return returnData('error',1);
         // 获取数据库数据
         $data = (new LoginDao())->loginSelect($wxArray);
-        if($data['msg']=='error') return returnData('error');
+        if($data['msg']=='error') return returnData('error',2);
         // 返回相应数据
         return returnData('success',$data['data']);
     }

@@ -114,7 +114,7 @@ class LoginDao implements LoginInterface
         // 查找并返回
         $list = LoginModel::get($wxArray['openid']);
         // 验证
-        if(!$list) return returnData('error',false);
+        if(!$list) return returnData('error');
         // 返回数据格式
         return returnData('success',$list);
     }
