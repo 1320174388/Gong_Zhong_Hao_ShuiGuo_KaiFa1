@@ -35,7 +35,7 @@ class LoginLibrary
         // 获取数据库数据
         $data = (new LoginDao())->loginSelect($wxArray);
         // 判断是否有数据
-        if($data['data'])
+        if($data['msg']=='success')
         {
             // 修改access_token
             $res = (new LoginDao())->loginUpdate($wxArray);
