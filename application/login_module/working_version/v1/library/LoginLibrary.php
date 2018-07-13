@@ -32,12 +32,25 @@ class LoginLibrary
         $wxObject = $this->curlPost($access);
         // 解析wxArray
         $wxArray = json_decode($wxObject['data'],true);
-//        // 保存access_token
-//        $res = (new LoginDao())->loginCreate($wxArray);
-//        // 验证数据
-//        if($res['msg']=='error') return returnData('error');
+        // 获取数据库数据
+        $data = (new LoginDao())->loginSelect($wxArray);
+        // 判断是否有数据
+        if($data['data'])
+        {
+            // 修改access_token
+            $res = (new LoginDao())->loginUpdata($wxArray);
+            // 验证数据
+            if($res['msg']=='error') return returnData('error');
+        }
+        else
+        {
+            // 保存access_token
+            $res = (new LoginDao())->loginCreate($wxArray);
+            // 验证数据
+            if($res['msg']=='error') return returnData('error');
+        }
         // 返回相应数据
-        return returnData('success',$wxArray);
+        return returnData('success',$res['data']);
     }
 
     /**
