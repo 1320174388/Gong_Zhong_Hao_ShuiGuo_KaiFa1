@@ -48,7 +48,7 @@ class LoginLibrary
         $data = (new LoginDao())->loginSelect($wxArray);
         if($data['msg']=='error') return returnData('error',2);
         // 返回相应数据
-        return returnData('success',$data['data']);
+        return returnData('success',$data['data']['user_token']);
     }
 
     /**

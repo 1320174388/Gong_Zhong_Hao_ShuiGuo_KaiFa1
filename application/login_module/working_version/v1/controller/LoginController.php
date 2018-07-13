@@ -10,7 +10,9 @@
 namespace app\login_module\working_version\v1\controller;
 use think\Controller;
 use think\Request;
+use think\Session;
 use app\login_module\working_version\v1\library\LoginLibrary;
+
 class LoginController extends Controller
 {
     /**
@@ -53,7 +55,9 @@ class LoginController extends Controller
         $array = (new LoginLibrary())->loginLibrary($request->get('code'));
         // 验证token值
         if($array['msg']=='error') return $array['data'];
+        // 保存token值到session中
+        Session::set($_SERVER["SERVER_NAME"],$array['data']);
         // 显示页面
-        return dump($array['data']);
+        return dump(Session::get($_SERVER["SERVER_NAME"]));
     }
 }
