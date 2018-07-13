@@ -31,13 +31,13 @@ class LoginLibrary
         // curl发送换取access_token
         $wxObject = $this->curlPost($access);
         // 解析wxArray
-        $wxArray = json_decode($wxObject,true);
+        $wxArray = json_decode($wxObject['data'],true);
         // 保存access_token
-        $res = (new LoginDao())->loginCreate();
+        $res = (new LoginDao())->loginCreate($wxArray);
         // 验证数据
         if($res['msg']=='error') return returnData('error');
         // 返回相应数据
-        return returnData('success',$wxObject['data']);
+        return returnData('success',$wxArray['data']);
     }
 
     /**

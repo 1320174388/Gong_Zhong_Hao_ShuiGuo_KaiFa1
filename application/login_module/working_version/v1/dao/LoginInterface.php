@@ -12,7 +12,7 @@ namespace app\login_module\working_version\v1\dao;
 interface LoginInterface{
 
     /**
-     * 名  称 : applyCreate()
+     * 名  称 : loginCreate()
      * 功  能 : 声明：用户申请成为管理员接口
      * 变  量 : --------------------------------------
      * 输  入 : (int) $applyName     => '用户名';
