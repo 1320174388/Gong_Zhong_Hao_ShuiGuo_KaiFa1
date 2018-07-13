@@ -114,7 +114,7 @@ class LoginDao implements LoginInterface
         // 实例化用户登陆model
         $loginModel = new LoginModel();
         // 查找并返回
-        $list = $loginModel->select();
+        $list = $loginModel->all();
         // 验证
         if(!$list)
             return returnData('error',false);

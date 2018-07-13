@@ -38,7 +38,7 @@ class LoginLibrary
         if($data['data'])
         {
             // 修改access_token
-            $res = (new LoginDao())->loginUpdata($wxArray);
+            $res = (new LoginDao())->loginUpdate($wxArray);
             // 验证数据
             if($res['msg']=='error') return returnData('error');
         }
