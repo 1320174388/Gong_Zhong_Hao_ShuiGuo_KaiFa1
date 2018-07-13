@@ -50,8 +50,10 @@ class LoginController extends Controller
     public function  loginInit(Request $request)
     {
         // 通过code换取网页授权access_token显示首页
-        $token = (new LoginLibrary())->loginLibrary($request->get('code'));
+        $array = (new LoginLibrary())->loginLibrary($request->get('code'));
+        // 验证token值
+        if($array['msg'=='error']) return 'false';
         // 显示页面
-        print_r(json_decode($token['data'],true));
+        return print_r($array['data']);
     }
 }

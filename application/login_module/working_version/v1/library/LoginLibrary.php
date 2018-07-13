@@ -29,9 +29,15 @@ class LoginLibrary
         $access.= '&code='.$code;
         $access.= '&grant_type=authorization_code';
         // curl发送换取access_token
-        $wxArray = $this->curlPost($access);
+        $wxObject = $this->curlPost($access);
+        // 解析wxArray
+        $wxArray = json_decode($wxObject,true);
+        // 保存access_token
+        $res = (new LoginDao())->loginCreate();
+        // 验证数据
+        if($res['msg']=='error') return returnData('error');
         // 返回相应数据
-        return returnData('success',$wxArray['data']);
+        return returnData('success',$wxObject['data']);
     }
 
     /**
