@@ -8,6 +8,7 @@
  *  历史记录 :  -----------------------
  */
 namespace app\login_module\working_version\v1\library;
+use app\login_module\working_version\v1\dao\LoginDao;
 
 class LoginLibrary
 {
@@ -27,12 +28,10 @@ class LoginLibrary
         $access.= '&secret='.config('v1_config.AppSecret');
         $access.= '&code='.$code;
         $access.= '&grant_type=authorization_code';
-
         // curl发送换取access_token
-        $token = $this->curlPost($access);
+        $wxArray = $this->curlPost($access);
         // 返回相应数据
-        return returnData('success',$token['data']);
-
+        return returnData('success',$wxArray['data']);
     }
 
     /**
