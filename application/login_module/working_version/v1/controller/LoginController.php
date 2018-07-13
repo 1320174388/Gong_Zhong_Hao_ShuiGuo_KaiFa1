@@ -10,7 +10,7 @@
 namespace app\login_module\working_version\v1\controller;
 use think\Controller;
 use think\Request;
-use think\Session;
+use think\facade\Session;
 use app\login_module\working_version\v1\library\LoginLibrary;
 
 class LoginController extends Controller
@@ -56,9 +56,8 @@ class LoginController extends Controller
         // 验证token值
         if($array['msg']=='error') return $array['data'];
         // 保存token值到session中
-        $md5String = md5($_SERVER["SERVER_NAME"].'login_module');
-        Session::set($md5String,$array['data']);
+        Session::set('login_user_token',$array['data']);
         // 显示页面
-        return dump(Session::get($md5String));
+        return dump(Session::get('login_user_token'));
     }
 }
