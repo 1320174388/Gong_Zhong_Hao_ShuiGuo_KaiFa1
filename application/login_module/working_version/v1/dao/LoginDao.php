@@ -112,7 +112,10 @@ class LoginDao implements LoginInterface
     public function loginSelect($wxArray)
     {
         // 查找并返回
-        $list = LoginModel::find($wxArray['openid']);
+        $list = LoginModel::where(
+            'user_openid',
+            $wxArray['openid']
+        )->find();
         // 验证
         if(!$list) return returnData('error');
         // 返回数据格式
