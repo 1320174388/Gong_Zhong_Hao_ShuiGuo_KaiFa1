@@ -37,7 +37,7 @@ class LoginLibrary
         // 验证数据
         if($res['msg']=='error') return returnData('error');
         // 返回相应数据
-        return returnData('success',$wxArray['data']);
+        return returnData('success',$wxArray);
     }
 
     /**
