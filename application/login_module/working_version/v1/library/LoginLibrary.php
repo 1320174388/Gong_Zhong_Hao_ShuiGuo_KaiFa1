@@ -49,8 +49,11 @@ class LoginLibrary
             // 验证数据
             if($res['msg']=='error') return returnData('error');
         }
+        // 获取数据库数据
+        $data = (new LoginDao())->loginSelect($wxArray);
+        if($data['msg']=='error') return returnData('error');
         // 返回相应数据
-        return returnData('success',$res['data']);
+        return returnData('success',$data['data']);
     }
 
     /**
