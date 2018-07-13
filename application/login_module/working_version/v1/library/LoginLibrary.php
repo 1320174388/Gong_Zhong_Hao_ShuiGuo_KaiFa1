@@ -40,7 +40,7 @@ class LoginLibrary
             // 修改access_token
             $res = (new LoginDao())->loginUpdate($wxArray);
             // 验证数据
-            if($res['msg']=='error') return returnData('error',$data['data']);
+            if($res['msg']=='error') return returnData('error');
         }
         else
         {

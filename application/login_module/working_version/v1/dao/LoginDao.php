@@ -111,10 +111,8 @@ class LoginDao implements LoginInterface
      */
     public function loginSelect($wxArray)
     {
-        // 实例化用户登陆model
-        $loginModel = new LoginModel();
         // 查找并返回
-        $list = $loginModel->all();
+        $list = LoginModel::all();
         // 验证
         if(!$list) return returnData('error',false);
         // 返回数据格式
