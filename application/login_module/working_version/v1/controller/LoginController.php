@@ -56,8 +56,9 @@ class LoginController extends Controller
         // 验证token值
         if($array['msg']=='error') return $array['data'];
         // 保存token值到session中
-        Session::set($_SERVER["SERVER_NAME"],$array['data']);
+        $md5String = md5($_SERVER["SERVER_NAME"].'login_module');
+        Session::set($md5String,$array['data']);
         // 显示页面
-        return dump(Session::get($_SERVER["SERVER_NAME"]));
+        return dump(Session::get($md5String));
     }
 }
