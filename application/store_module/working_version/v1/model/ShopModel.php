@@ -7,7 +7,7 @@
  *  文件描述 :  店铺管理模型
  *  历史记录 :  -----------------------
  */
-namespace app\right_module\working_version\v1\model;
+namespace app\store_module\working_version\v1\model;
 use think\Model;
 
 class ShopModel extends Model
