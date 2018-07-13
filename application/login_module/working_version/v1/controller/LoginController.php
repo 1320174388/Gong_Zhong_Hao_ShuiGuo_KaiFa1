@@ -54,6 +54,6 @@ class LoginController extends Controller
         // 验证token值
         if($array['msg']=='error') return $array['data'];
         // 显示页面
-        return '<pre>'.json_encode($array['data']).'</pre>';
+        return dump($array['data']);
     }
 }
