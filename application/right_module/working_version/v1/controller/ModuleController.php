@@ -52,7 +52,7 @@ class ModuleController extends Controller
     public function obtainModule(Request $request)
     {
         // 跨模块调用方法
-        $loginLibrary = A('login_module/library/LoginLibrary');
+        $loginLibrary = new LoginLibrary();
         // 通过code换取网页授权access_token显示首页
         $array = $loginLibrary->loginLibrary($request->get('code'));
         // 验证token值
