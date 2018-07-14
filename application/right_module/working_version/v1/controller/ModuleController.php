@@ -9,6 +9,7 @@
  */
 namespace app\right_module\working_version\v1\controller;
 use think\Controller;
+use think\Request;
 use think\facade\Session;
 use app\login_module\working_version\v1\library\LoginLibrary;
 
@@ -48,7 +49,7 @@ class ModuleController extends Controller
      * 输  出 : --------------------------------------
      * 创  建 : 2018/07/11 09:53
      */
-    public function obtainModule()
+    public function obtainModule(Request $request)
     {
         // 通过code换取网页授权access_token显示首页
         $array = (new LoginLibrary())->loginLibrary($request->get('code'));
