@@ -28,7 +28,7 @@ class LoginController extends Controller
         // 获取项目域名
         $projectUrl = $_SERVER["REQUEST_SCHEME"].'://';
         $projectUrl.= $_SERVER["SERVER_NAME"];
-        $projectUrl.= '/login_module/login_init';
+        $projectUrl.= '/v1/login_module/login_init';
         // 处理项目域名
         $route = urlencode($projectUrl);
         // 拼接公众号登录地址

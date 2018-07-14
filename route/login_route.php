@@ -12,10 +12,10 @@
 // : 传值方式：GET  ，功能：通过code换取网页授权access_token，显示首页
 // +----------------------------------
 Route::get(
-    '/login_module/login_route',
+    '/v1/login_module/login_route',
     'login_module/v1.controller.LoginController/loginRoute'
 );
 Route::get(
-    '/login_module/login_init',
+    '/v1/login_module/login_init',
     'login_module/v1.controller.LoginController/loginInit'
 );
