@@ -20,7 +20,7 @@ class Right_v1_IsAdmin
      * 输  出 : {"errNum":102,"retMsg":"权限不足","retData":false}
      * 创  建 : 2018/06/23 10:23
      */
-    public function handle(\Closure $next)
+    public function handle($request,\Closure $next)
     {
         // 获取项目域名
         $projectUrl = $_SERVER["REQUEST_SCHEME"].'://';
@@ -28,14 +28,12 @@ class Right_v1_IsAdmin
         // 获取域名独立Session信息
         $strMd5 = md5($_SERVER["SERVER_NAME"].'login_user_token');
         // 判断Session信息是否存在
-        if(Session::get($strMd5)){
+        if(!Session::get($strMd5)){
             // 拼接路由字符串
             $projectUrl.= '/v1/right_module/login_admin';
             die("<script>window.location.replace({$projectUrl});</script>");
         }else{
-            // 拼接路由字符串
-            $projectUrl.= '/v1/right_module/login_admin';
-            die("<script>window.location.replace({$projectUrl});</script>");
+            return $next($request);
         }
     }
 }

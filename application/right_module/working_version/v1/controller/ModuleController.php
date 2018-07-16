@@ -14,19 +14,6 @@ use think\Request;
 class ModuleController extends Controller
 {
     /**
-     * 名  称 : moduleRoute()
-     * 功  能 : 公众号后台初始化接口
-     * 变  量 : --------------------------------------
-     * 输  入 : (String) $token => '管理员标识';
-     * 输  出 : --------------------------------------
-     * 创  建 : 2018/07/13 13:15
-     */
-    public function  moduleRoute()
-    {
-
-    }
-
-    /**
      * 名  称 : obtainModule()
      * 功  能 : 获取管理员可管理模块的信息
      * 变  量 : --------------------------------------
