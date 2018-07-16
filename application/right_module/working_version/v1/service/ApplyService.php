@@ -54,6 +54,6 @@ class ApplyService
         // 验证数据格式
         if($list['msg']=='error') return returnData('error');
         // 返回数据
-        return returnData('success',true);
+        return returnData('success',$list['data']);
     }
 }
