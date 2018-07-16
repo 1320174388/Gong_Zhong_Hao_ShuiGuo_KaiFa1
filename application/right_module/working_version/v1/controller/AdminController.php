@@ -22,7 +22,13 @@ class AdminController extends Controller
      */
     public function loginAdmin()
     {
-        return view('/v1/adminLogin');
+        // 获取用户申请管理员操作页面地址
+        $url = config('qd_html_url.HTTP_URL');
+        $url.= config('qd_html_url.Admin_Login');
+        // 显示注册页面视图
+        return "<script>
+                    window.location.replace('{$url}');
+               </script>";
     }
 
     /**
