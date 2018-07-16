@@ -29,6 +29,7 @@ class ApplyService
     {
         // 执行数据写入
         $res = (new ApplyDao())->applyCreate(
+            $post['applyToken'],
             $post['applyName'],
             $post['applyPassward'],
             $post['applyPhone']

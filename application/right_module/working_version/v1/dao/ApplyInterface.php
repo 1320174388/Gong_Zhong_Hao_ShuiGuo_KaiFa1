@@ -15,6 +15,7 @@ interface ApplyInterface{
      * 名  称 : applyCreate()
      * 功  能 : 声明：用户申请成为管理员接口
      * 变  量 : --------------------------------------
+     * 输  入 : (int) $token         => '身份令牌';
      * 输  入 : (int) $applyName     => '用户名';
      * 输  入 : (str) $applyPassward => '密码';
      * 输  入 : (int) $applyPhone    => '手机号';
@@ -22,7 +23,7 @@ interface ApplyInterface{
      * 输  出 : ['msg'=>'error'  ,'data'=>false]
      * 创  建 : 2018/06/28 12:54
      */
-    public function applyCreate($applyName,$applyPassward,$applyPhone);
+    public function applyCreate($token,$applyName,$applyPassward,$applyPhone);
 
     /**
      * 名  称 : applySelect()
