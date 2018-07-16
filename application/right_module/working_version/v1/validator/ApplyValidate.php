@@ -15,6 +15,7 @@ class ApplyValidate extends Validate
     /**
      * 名  称 : $rule => '静态属性'
      * 功  能 : 定义验证规则
+     *  输  入 : (str) $post['applyToken']     => 'Tokem';
      * 输  入 : (str) $post['applyName']       => '用户名';
      * 输  入 : (str) $post['applyPassward']   => '申请密码';
      * 输  入 : (str) $post['applyRePassword'] => '申请密码';
@@ -22,6 +23,7 @@ class ApplyValidate extends Validate
      * 创  建 : 2018/06/57 15:57
      */
     protected $rule = [
+        'applyToken'      =>  'require',
         'applyName'       =>  'require|max:6',
         'applyPassward'   =>  'require|min:6|max:18',
         'applyRePassword' =>  'require|confirm:applyPassward',
@@ -33,6 +35,7 @@ class ApplyValidate extends Validate
      * 创  建 : 2018/06/57 15:57
      */
     protected $message  =   [
+        'applyToken.require'      => 'Token为空',
         'applyName.require'       => '请输入用户名称',
         'applyName.max'           => '用户名输入过长',
         'applyPassward.require'   => '请输入密码',
