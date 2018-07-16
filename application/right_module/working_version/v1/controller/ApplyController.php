@@ -99,21 +99,26 @@ class ApplyController extends Controller
      * 名  称 : applyCode()
      * 功  能 : 给用户发送验证码
      * 变  量 : --------------------------------------
-     * 输  入 : (String)
-     * 输  出 : --------------------------------------
+     * 输  入 : (String) $get['phone']   => 手机号
+     * 输  出 : ['msg'=>'success','data'=>true]
+     * 输  出 : ['msg'=>'error','data'=>false]
      * 创  建 : 2018/07/10 10:54
      */
-    public function applyCode()
+    public function applyCode(Request $request)
     {
-        $phoneNumber = '手机号';
+        // 验证码
+        $code = mt_rand(111111,999999);
+        $phoneNumber = $request->get('phone');
         $textMessage = '您在中春果业平台做了申请管理员操作，验证码：';
-        $textMessage.= mt_rand(111111,999999);
+        $textMessage.= $code;
         $textMessage.= '，请于5分钟之内填写。如非本人操作，请忽略本条短信。';
         $res = (new qcloudSmsLibrary())->sendMessige(
             $phoneNumber,
             $textMessage
         );
         if($res['msg']=='error') return returnResponse(1,'发送失败');
+        // 写入文件缓存
+        Cache::set($phoneNumber,$code,300);
         // 返回发送结果
         return returnResponse(1,'发送成功');
     }
