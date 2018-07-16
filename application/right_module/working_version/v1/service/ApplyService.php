@@ -49,6 +49,11 @@ class ApplyService
      */
     public function applyGet()
     {
-
+        // 获取用户信息
+        $list = (new ApplyDao())->applySelect();
+        // 验证数据格式
+        if($list['msg']=='error') return returnData('error');
+        // 返回数据
+        return returnData('success',true);
     }
 }
