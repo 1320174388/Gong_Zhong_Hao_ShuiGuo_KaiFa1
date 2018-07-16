@@ -21,7 +21,6 @@ interface LoginInterface{
      *              'refresh_token' => '令牌刷新标识',
      *              'openid'        => '用户openId',
      *              'scope'         => '这个字段没用，不用管',
-     *              'applyToken'    => '用户token值',
      *          ];
      * 输  出 : ['msg'=>'success','data'=>'user_token主键']
      * 创  建 : 2018/07/13 13:19

@@ -24,7 +24,6 @@ class LoginDao implements LoginInterface
      *              'refresh_token' => '令牌刷新标识',
      *              'openid'        => '用户openId',
      *              'scope'         => '这个字段没用，不用管',
-     *              'applyToken'    => '用户token值',
      *          ];
      * 输  出 : ['msg'=>'success','data'=>'user_token主键']
      * 创  建 : 2018/07/13 14:30
@@ -37,7 +36,7 @@ class LoginDao implements LoginInterface
             // 实例化用户登陆model
             $loginModel = new LoginModel();
             // 获取用户登陆信息保存到数据库
-            $loginModel->user_token    = $wxArray['applyToken'];
+            $loginModel->user_token    = md5(uniqid());
             $loginModel->user_openid   = $wxArray['openid'];
             $loginModel->user_time     = time();
             $loginModel->access_token  = $wxArray['access_token'];
