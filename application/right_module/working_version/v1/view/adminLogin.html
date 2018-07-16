@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- 
+		     版权声明 :  地老天荒科技有限公司
+		     文件名称 :  adminLogin.html
+		     创 建 者   :  Cheng Tao
+		     创建日期 :  2018/07/06 10:19
+		     文件描述 :  公众号web页面后台登录页面
+		     历史记录 :  ----------------------- 
+		-->
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="Author" content="Cheng Tao" />
+		<meta name="Copyright" content="地老天荒科技有限公司" />
+		<meta name="description" content="公众号web页面后台登录页面" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/public/admin/css/cssInit.css" />
+		<script src="../js/rem.js"></script>
+		<script src="../js/verificationCode.js"></script>
+		<link rel="stylesheet" type="text/css" href="/public/admin/css/adminLogin.css" />
+	</head>
+
+	<body>
+
+		<div class="wrap">
+			<form action="" onsubmit="return verfy()">
+				<div class="title-wrap">
+					欢迎登录
+				</div>
+				<p class="title-down-line"></p>
+				<div class="inpt-wrap">
+					<img src="../images/phone.svg" class="phone" />
+					<input type="text" class="inpt" name="phoneNumber" placeholder="请输入手机号" />
+				</div>
+				<div class="inpt-wrap">
+					<img src="../images/lock.svg" class="lock" />
+					<input type="password" class="inpt" name="password" placeholder="请输入密码" />
+				</div>
+				<div class="verification-code-wrap">
+					<input type="text" class="inpt-verification" name="verfyCode" id="inpt-verification"/>
+					<div id="verification-code" class="verification-code"></div>
+				</div>
+				<input type="submit" value="登录" class="sub-inpt"/>
+			</form>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		var clientWidth = window.innerWidth ||
+						document.documentElement.clientWidth ||
+						document.body.clientWidth;
+		var verifyWidth = 5*(20 * clientWidth / 375);
+		var verifyHeight = 1.65*(20 * clientWidth / 375);
+		var verifyCode = new GVerify("verification-code",verifyWidth,verifyHeight);
+		function verfy(){
+			var res = verifyCode.validate(document.getElementById("inpt-verification").value);
+			if(!res){
+				console.log("验证码错误，请重新输入验证码");
+			};
+			return res;
+			
+		}
+		
+	</script>
+
+</html>
