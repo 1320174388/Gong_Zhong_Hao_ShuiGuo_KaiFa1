@@ -85,13 +85,14 @@ class ApplyController extends Controller
         // 验证数据
         if (!$validate->check($request->post()))
         {
-            return $validate->getError();
+            return returnResponse(1,$validate->getError());
         }
         // 引入Service数据逻辑
         $res = (new ApplyService())->applyAdd($request->post());
         // 验证数据
-        if(!$res) return var_dump(false);
-        else return var_dump(true);
+        if(!$res) return returnResponse(2,'申请失败');
+        // 返回数据
+        return returnResponse(0,'申请失败');
     }
 
     /**
@@ -112,7 +113,8 @@ class ApplyController extends Controller
             $phoneNumber,
             $textMessage
         );
-        if($res['msg']=='error') return print_r($res['data']);
-        return print_r($res['data']);
+        if($res['msg']=='error') return returnResponse(1,'发送失败');
+        // 返回发送结果
+        return returnResponse(1,'发送成功');
     }
 }
