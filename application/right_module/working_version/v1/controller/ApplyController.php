@@ -10,6 +10,7 @@
 namespace app\right_module\working_version\v1\controller;
 use think\Controller;
 use think\Request;
+use think\facade\Cache;
 use app\right_module\working_version\v1\service\ApplyService;
 use app\right_module\working_version\v1\validator\ApplyValidate;
 use app\right_module\working_version\v1\library\qcloudSmsLibrary;
