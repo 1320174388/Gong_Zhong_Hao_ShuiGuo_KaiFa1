@@ -31,7 +31,8 @@ class Right_v1_IsAdmin
         if(!Session::get($strMd5)){
             // 拼接路由字符串
             $projectUrl.= '/v1/right_module/login_admin';
-            die("<script>window.location.replace({$projectUrl});</script>");
+            echo "<script>window.location.replace({$projectUrl});</script>";
+            exit;
         }else{
             return $next($request);
         }
