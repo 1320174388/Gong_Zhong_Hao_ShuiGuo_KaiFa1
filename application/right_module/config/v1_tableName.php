@@ -11,5 +11,7 @@ return [
     // 用户表
     'LoginTable' => 'data_home_users',
     // 管理员申请表
-    'ApplyTable' => 'data_admin_apply'
+    'ApplyTable' => 'data_admin_apply',
+    // 管理员申请表
+    'RightTable' => 'data_admin_roles'
 ];

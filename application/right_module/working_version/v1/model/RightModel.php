@@ -12,5 +12,16 @@ use think\Model;
 
 class RightModel extends Model
 {
+    // 设置当前模型对应的完整数据表名称
+    protected $table = '';
 
+    // 设置当前模型对应数据表的主键
+    protected $pk = 'role_index';
+
+    // 加载配置数据表名
+    protected function initialize()
+    {
+        parent::initialize();
+        $this->table = config('v1_tableName.RightTable');
+    }
 }

@@ -8,6 +8,7 @@
  *  历史记录 :  -----------------------
  */
 namespace app\right_module\working_version\v1\controller;
+use app\right_module\working_version\v1\service\RightServer;
 use think\Controller;
 
 class RightController extends Controller
@@ -22,6 +23,6 @@ class RightController extends Controller
      */
     public function rightList($token)
     {
-
+        $list = (new RightServer())->rightList($token);
     }
 }

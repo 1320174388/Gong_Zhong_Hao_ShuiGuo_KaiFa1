@@ -21,7 +21,7 @@ class SerificationLibrary
      * 输  入 : (string) $phone      => '电话号';
      * 输  入 : (string) $code     => '验证码';
      * 输  出 : ---------------------------------------------
-     * 创  建 : 2018/07/24 17:24
+     * 创  建 : 2018/07/24 16:48
      */
     public function serifiCation($phone,$code)
     {
