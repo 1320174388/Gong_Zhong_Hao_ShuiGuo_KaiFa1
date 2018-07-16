@@ -23,6 +23,6 @@ class ModuleController extends Controller
      */
     public function obtainModule(Request $request)
     {
-
+        return 123;
     }
 }
