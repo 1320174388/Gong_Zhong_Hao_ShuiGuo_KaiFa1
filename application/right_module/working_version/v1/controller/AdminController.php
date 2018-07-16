@@ -50,13 +50,16 @@ class AdminController extends Controller
      * 功  能 : 获取管理员申请表数据
      * 变  量 : --------------------------------------
      * 输  入 : --------------------------------------
-     * 输  出 : --------------------------------------
+     * 输  出 : {"errNum":1,"retMsg":"提示信息","retData":"数据"}
      * 创  建 : 2018/07/16 16:55
      */
     public function applyList()
     {
         // 获取所有申请管理员数据
         $list = (new ApplyService())->applyGet();
-        
+        // 验证数据格式
+        if($list['msg']=='error') return returnResponse(1,'没有管理员申请');
+        // 返回数据
+        return returnResponse(0,'请求成功',$list['data']);
     }
 }
