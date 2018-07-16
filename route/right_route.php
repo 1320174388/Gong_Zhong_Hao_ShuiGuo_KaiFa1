@@ -72,4 +72,16 @@ Route::group('v1/right_module/', function(){
         'apply_list',
         'right_module/v1.controller.AdminController/applyList'
     );
+    Route::post(
+        'right_list',
+        'right_module/v1.controller.RightController/rightAdd'
+    );
+    Route::put(
+        'right_list',
+        'right_module/v1.controller.RightController/rightPut'
+    );
+    Route::DELETE(
+        'right_list',
+        'right_module/v1.controller.RightController/rightDel'
+    );
 })->middleware('Right_v1_IsAdmin');

@@ -13,8 +13,63 @@ use app\right_module\working_version\v1\dao\RightDao;
 
 class RightServer
 {
-    public function rightList($token)
+    /**
+     * 名  称 : rightList()
+     * 功  能 : 查询职位
+     * 变  量 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : --------------------------------------
+     * 创  建 : 2018/07/16 20:29
+     */
+    public function rightList()
     {
-        $list = (new RightDao())->rightList($token);
+        $list = (new RightDao())->rightList();
+
+        return returnData('success',$list['data']);
+    }
+
+    /**
+     * 名  称 : rightAdd()
+     * 功  能 : 添加职位
+     * 变  量 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : --------------------------------------
+     * 创  建 : 2018/07/16 20:29
+     */
+    public function rightAdd($name,$info)
+    {
+        $list = (new RightDao())->rightAdd($name,$info);
+
+        return returnData('success',$list['data']);
+    }
+
+    /**
+     * 名  称 : rightPut()
+     * 功  能 : 修改职位
+     * 变  量 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : --------------------------------------
+     * 创  建 : 2018/07/16 20:29
+     */
+    public function rightPut($name,$info)
+    {
+        $list = (new RightDao())->rightPut($name,$info);
+
+        return returnData('success',$list['data']);
+    }
+
+    /**
+     * 名  称 : rightDel()
+     * 功  能 : 删除职位
+     * 变  量 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : --------------------------------------
+     * 创  建 : 2018/07/16 20:29
+     */
+    public function rightDel($info)
+    {
+        $list = (new RightDao())->rightDel($info);
+
+        return returnData('success',$list['data']);
     }
 }
