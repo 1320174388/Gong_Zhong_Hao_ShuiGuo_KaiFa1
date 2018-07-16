@@ -16,6 +16,7 @@
 // : 传值方式：PUT， 功能：权限管理，管理员修改密码接口
 // : 传值方式：GET， 功能：权限管理，管理员登录接口
 // : 传值方式：POST，功能：权限管理，执行管理员登录功能
+// : 传值方式：GET， 功能：权限管理，管理员注册前置接口
 // : 传值方式：GET， 功能：权限管理，管理员注册页面
 // +---------------------------------------------------
 Route::post(
@@ -41,6 +42,10 @@ Route::put(
 Route::get(
     'v1/right_module/login_admin',
     'right_module/v1.controller.AdminController/loginAdmin'
+);
+Route::get(
+    'v1/right_module/login_preposition',
+    'right_module/v1.controller.ApplyController/applyPreposition'
 );
 Route::get(
     'v1/right_module/login_register',

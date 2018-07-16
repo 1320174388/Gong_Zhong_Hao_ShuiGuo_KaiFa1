@@ -43,10 +43,10 @@ class LoginLibrary
             $res = (new LoginDao())->loginCreate($wxArray);
         }
         // 验证数据
-        if($res['msg']=='error') return returnData('error',1);
+        if($res['msg']=='error') return returnData('error');
         // 获取数据库数据
         $data = (new LoginDao())->loginSelect($wxArray);
-        if($data['msg']=='error') return returnData('error',2);
+        if($data['msg']=='error') return returnData('error');
         // 返回相应数据
         return returnData('success',$data['data']['user_token']);
     }

@@ -17,6 +17,32 @@ use app\right_module\working_version\v1\library\qcloudSmsLibrary;
 class ApplyController extends Controller
 {
     /**
+     * 名  称 : applyPreposition()
+     * 功  能 : 管理员注册前置接口
+     * 变  量 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : --------------------------------------
+     * 创  建 : 2018/07/16 11:15
+     */
+    public function applyPreposition()
+    {
+        // 获取项目域名
+        $projectUrl = $_SERVER["REQUEST_SCHEME"].'://';
+        $projectUrl.= $_SERVER["SERVER_NAME"];
+        $projectUrl.= '/v1/right_module/login_preposition';
+        // 处理项目域名
+        $route = urlencode($projectUrl);
+        // 拼接公众号登录地址
+        $url = 'https://open.weixin.qq.com/connect/oauth2/authorize';
+        $url.= '?appid='.config('v1_config.AppID');
+        $url.= '&redirect_uri='.$route;
+        $url.= '&response_type=code&scope=snsapi_base';
+        $url.= '&state=STATE#wechat_redirect';
+        // 跳转公众号后台登录页面
+        return '<script>window.location.replace("'.$url.'");</script>';
+    }
+
+    /**
      * 名  称 : applyRegister()
      * 功  能 : 显示管理员注册页面
      * 变  量 : --------------------------------------
@@ -24,21 +50,27 @@ class ApplyController extends Controller
      * 输  出 : --------------------------------------
      * 创  建 : 2018/07/16 11:15
      */
-    public function applyRegister()
+    public function applyRegister(Request $request)
     {
-        return view('/v1/adminRegister');
+        // 通过code换取网页授权access_token显示首页
+        $array = (new LoginLibrary())->loginLibrary($request->get('code'));
+        // 验证token值
+        if($array['msg']=='error') return '<h1>身份验证失败<h1>';
+        // 显示注册页面视图
+        return view('/v1/adminRegister',['admin_token'=>$array['data']]);
     }
 
     /**
      * 名  称 : applyInit()
      * 功  能 : 执行用户申请管理员操作
      * 变  量 : --------------------------------------
-     * 输  入 : (str) $post['applyName']       => '用户名';
-     * 输  入 : (str) $post['applyPassward']   => '申请密码';
-     * 输  入 : (str) $post['applyRePassword'] => '申请密码';
-     * 输  入 : (str) $post['applyPhone']      => '手机号';
+     * 输  入 : (String) $post['applyToken']      => '身份令牌';
+     * 输  入 : (String) $post['applyName']       => '用户名';
+     * 输  入 : (String) $post['applyPassward']   => '申请密码';
+     * 输  入 : (String) $post['applyRePassword'] => '申请密码';
+     * 输  入 : (String) $post['applyPhone']      => '手机号';
      * 输  出 : --------------------------------------
-     * 创  建 : 2018/06/57 15:57
+     * 创  建 : 2018/07/16 11:16
      */
     public function applyInit(Request $request)
     {
