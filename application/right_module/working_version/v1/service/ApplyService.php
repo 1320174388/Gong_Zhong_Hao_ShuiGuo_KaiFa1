@@ -39,4 +39,21 @@ class ApplyService
         // 返回数据
         return returnData('success',true);
     }
+    /**
+     * 名  称 : applyGet()
+     * 功  能 : 获取所有申请管理员数据
+     * 变  量 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : --------------------------------------
+     * 创  建 : 2018/07/16 17:37
+     */
+    public function applyGet()
+    {
+        // 获取用户信息
+        $list = (new ApplyDao())->applySelect();
+        // 验证数据格式
+        if($list['msg']=='error') return returnData('error');
+        // 返回数据
+        return returnData('success',$list['data']);
+    }
 }
