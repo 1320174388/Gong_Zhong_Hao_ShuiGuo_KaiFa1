@@ -18,19 +18,18 @@ class SerificationLibrary
      * 名  称 : serifiCation()
      * 功  能 : 获取验证码
      * 变  量 : --------------------------------------
-     * 输  入 : (string) $phone      => '电话号';
-     * 输  入 : (string) $code     => '验证码';
+     * 输  入 : (string) $phone  => '电话号';
+     * 输  入 : (string) $code   => '验证码';
      * 输  出 : ---------------------------------------------
      * 创  建 : 2018/07/24 17:24
      */
     public function serifiCation($phone,$code)
     {
-        if($code !== Cache::get('code')){
+        if(!Cache::get($phone)){
             return returnData(1,'没有验证码');
         }
-
         if($code !== Cache::get($phone)){
-            return returnData(1,'验证码错误');
+            return returnData(2,'验证码错误');
         }
         return returnData(0,'验证码正确');
     }
