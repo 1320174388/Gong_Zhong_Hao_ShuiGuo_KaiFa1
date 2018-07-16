@@ -22,6 +22,6 @@ class AdminController extends Controller
      */
     public function loginAdmin()
     {
-        return 123;
+
     }
 }

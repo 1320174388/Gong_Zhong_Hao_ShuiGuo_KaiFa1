@@ -1,0 +1,79 @@
+/**
+ * 版权声明 :  地老天荒科技有限公司
+ * 文件名称 :  platformPersonalStore.css     
+ * 创 建 者   :  Cheng Tao
+ * 创建日期 :  2018/07/13 10:19
+ * 文件描述 :  公众号web页面平台个人店铺css文件
+ * 历史记录 :  ----------------------- 
+ */
+.wrap{
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+div,p{
+	box-sizing: border-box;
+}
+.user-icon-wrap{
+	width: 8rem;
+	height: 8rem;
+	margin: 4.9rem auto 3.875rem;
+	background: #4D4F66;
+	text-align: center;
+	line-height: 8rem;
+	border-radius: 50%;
+}
+.user-icon{
+	width: 3.25rem;
+}
+.personal-store{
+	width: 15rem;
+	height: 2.2rem;
+	font-size: 0.9rem;
+	color: #fff;
+	background: #4D4F66;
+	border-radius: 0.15rem;
+	border: 0;
+	outline: none;
+}
+/*创建弹出框样式*/
+.alert-wrap{
+	height: 100vh;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background: rgba(51, 51, 51, 0.7);
+	padding-top: 7.15rem;
+}
+.create-content-wrap{
+	width: 15rem;
+	height: 11.5rem;
+	background: #383f5a;
+	margin: 0 auto;
+	border-radius: 6px;
+	padding: 1rem 1.25rem 0;
+}
+.create-content{
+	width: 12.5rem;
+	margin-bottom: 0.7rem;
+	height: 1.1rem;
+	border-bottom: 1px solid #fff;
+	padding-left: 0.8rem;
+}
+.create-input{
+	border: none;
+	background: transparent;
+	outline: none;
+	color: #fff;
+}
+.sub-inpt{
+	width: 5.25rem;
+	height: 2.2rem;
+	color: #fff;
+	font-size: 0.75rem;
+	border: 1px solid #fff;
+	outline: none;
+	border-radius: 0.15rem;
+	background: transparent;
+	margin-top: 1.3rem;
+}

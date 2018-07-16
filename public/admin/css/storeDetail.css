@@ -1,0 +1,37 @@
+/**
+ * 版权声明 :  地老天荒科技有限公司
+ * 文件名称 :  storeDetail.css     
+ * 创 建 者   :  Cheng Tao
+ * 创建日期 :  2018/07/13 16:09
+ * 文件描述 :  公众号web页面店铺管理详情css文件
+ * 历史记录 :  ----------------------- 
+ */
+.store-wrap{
+	height: 6.25rem;
+	background: #383f5a;
+	box-shadow: 0px 4px 5px 0px 
+		rgba(33, 35, 54, 0.75);
+	border-radius: 0.15rem;
+	color: #fff;
+	padding: 0.8rem;
+	display: flex;
+	margin-bottom: 0.5rem;
+	position: relative;
+}
+.store-img{
+	width: 4.6rem;
+	height: 4.625rem;
+}
+.store-text-wrap{
+	width: 9.5rem;
+	padding: 0.45rem 0 0 0.575rem;
+	line-height: 1rem;
+	font-size: 0.6rem;
+}
+
+.remove-icon{
+	width: 1.125rem;
+	position: absolute;
+	top: 2.575rem;
+	right: 0.8rem;
+}

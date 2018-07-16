@@ -1,0 +1,208 @@
+/**
+ * 版权声明 :  地老天荒科技有限公司
+ * 文件名称 :  platformPersonalStore.css     
+ * 创 建 者   :  Cheng Tao
+ * 创建日期 :  2018/07/13 10:19
+ * 文件描述 :  公众号web页面平台管理css文件
+ * 历史记录 :  ----------------------- 
+ */
+
+
+/*选项卡*/
+
+.card-wrap {
+	display: flex;
+	background: #4D4F66;
+	color: #fff;
+}
+
+.id-card {
+	flex-grow: 1;
+	text-align: center;
+	height: 2.25rem;
+	line-height: 2.25rem;
+	font-size: 0.6rem;
+	border-bottom: 1px solid #383f5a;
+	border-right: 1px solid #383f5a;
+}
+
+.id-card:first-child {
+	font-size: 0.75rem;
+	background: #383f5a;
+}
+
+.id-card:last-child {
+	border-right: none;
+}
+
+
+/*选项卡内容容器样式*/
+
+.content-wrap {
+	display: none;
+}
+
+
+/*分类管理内容*/
+
+.type-manage-wrap {
+	padding: 0.5rem 0.8rem 0;
+}
+
+.type-manage {
+	width: 17.15rem;
+	height: 5.75rem;
+	background-color: #383f5a;
+	box-shadow: 0px 4px 5px 0px rgba(33, 35, 54, 0.75);
+	border-radius: 0.15rem;
+	margin-bottom: 0.5rem;
+	padding: 1rem 0.85rem 0;
+	position: relative;
+}
+
+.type-manage-text {
+	width: 12.9rem;
+	color: #FFFFFF;
+	font-size: 0.6rem;
+}
+
+.text-detail {
+	display: flex;
+	margin-top: 0.925rem;
+}
+/*文本超出部分隐藏变省略号*/
+.text-detail>p:last-of-type {
+	width: 10.775rem;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden
+}
+
+.type-manage-img {
+	position: absolute;
+	width: 1.125rem;
+	top: 1.3rem;
+	right: 0.85rem;
+}
+
+.type-manage-img:last-child {
+	top: 3.3rem;
+}
+
+.type-add-wrap {
+	position: fixed;
+	top: 27.575rem;
+	left: 0;
+	height: 2.25rem;
+	width: 100%;
+	text-align: center;
+	line-height: 2.25rem;
+	background-color: #383F5A;
+}
+
+.add-icon {
+	width: 1.2rem;
+}
+
+
+/*商家管理部分搜索框样式*/
+
+.search-wrap {
+	height: 2.25rem;
+	line-height: 2.25rem;
+	text-align: center;
+	position: relative;
+}
+
+.search-inpt {
+	width: 15.25rem;
+	height: 1.275rem;
+	border-radius: 0.625rem;
+	border: 2px solid #383F5A;
+	outline: none;
+	font-size: 0.45rem;
+	padding-left: 1rem;
+}
+
+.search-icon {
+	height: 0.7rem;
+	position: absolute;
+	top: 0.8rem;
+	right: 2rem;
+}
+
+
+/*文本框内placeholder字体样式*/
+
+input::-webkit-input-placeholder {
+	color: #abadc2;
+}
+
+input::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #abadc2;
+}
+
+input:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #abadc2;
+}
+
+input:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: #abadc2;
+}
+
+
+/*商家管理搜索框下内容*/
+
+.store-wrap {
+	height: 6.25rem;
+	background: #383f5a;
+	box-shadow: 0px 4px 5px 0px rgba(33, 35, 54, 0.75);
+	border-radius: 0.15rem;
+	color: #fff;
+	padding: 0.8rem;
+	display: flex;
+	margin-bottom: 0.5rem;
+}
+
+.store-img {
+	width: 4.6rem;
+	height: 4.625rem;
+}
+
+.store-text-wrap {
+	width: 9.5rem;
+	padding: 0.45rem 0 0 0.575rem;
+	line-height: 1rem;
+	font-size: 0.6rem;
+}
+
+.store-btn-wrap {
+	padding-top: 1.275rem;
+}
+
+.store-btn {
+	width: 3rem;
+	height: 1rem;
+	border: 1px solid #fff;
+	border-radius: 0.475rem;
+	color: #fff;
+	font-size: 0.45rem;
+	margin-bottom: 0.6rem;
+	outline: none;
+	background-color: #383F5A;
+}
+
+.store-btn:last-child {
+	background-color: #4D4F66;
+}
+/*分销管理内容样式*/
+.distribution{
+	width: 100%;
+	padding-top: 9.7rem;
+	text-align: center;
+	color: #383F5A;
+}

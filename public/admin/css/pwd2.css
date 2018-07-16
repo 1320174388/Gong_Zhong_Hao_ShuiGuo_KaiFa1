@@ -1,0 +1,97 @@
+.center h2 span{
+    width: 1.94rem;
+    height: .58rem;
+    font-size: .48rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: .36rem;
+    letter-spacing: 0px;
+    color: #333333;
+    margin: 1.21rem auto;
+    display: block;
+    border-bottom: .06rem solid #333333;
+}
+.text{
+    border:solid 2px #ccc;
+    width:6rem;
+    height:.7rem;
+    background-image:url("../img/lock.png")  ;
+    background-repeat: no-repeat;
+    margin: 0px auto .5rem;
+    border-radius: .15rem;
+    background-size:.4rem .5rem;
+    background-position: .21rem .1rem;
+}
+.text input{
+    float:left;
+    border:none;
+    background:none;
+    line-height:.7rem;
+    width:100%;
+    text-indent:.82rem;
+    font-size: .28rem;
+    color:#999999;
+}
+input[type=button]{
+    width: 6rem;
+    line-height: .88rem;
+    background-color: #4D4F66;
+    color: #fff;
+    margin: 0px auto;
+    border: none;
+    border-radius: .15rem;
+    display: block;
+    font-size:.36rem;
+}
+.next{
+    width: 100%;
+    margin-top: 1rem;
+}
+.black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width:100%;
+    height: 100%;
+    background-color: rgba(10,10,10,.5);
+    z-index:1001;
+
+
+
+}
+.dialog_content {
+    width: 6rem;
+    height: 4rem;
+    position: fixed;
+    top: 4.3rem;
+    left: .75rem;
+    background-color: white;
+    z-index: 1002;
+    overflow: auto;
+}
+.close{
+    width: .3rem;
+    position: absolute;
+    right: .2rem;
+    top:.2rem
+}
+.success{
+    display: block;
+    margin: .6rem auto;
+    width: 1rem;
+}
+.dialog_content h1{
+    font-size: .36rem;
+    color: #999999;
+    line-height: .36rem;
+    text-align: center;
+}
+.dialog_content h2{
+
+    font-size: .28rem;
+    line-height: .38rem;
+    text-align: center;
+    color: #999999;
+    margin-top: .4rem;
+}

@@ -1,0 +1,58 @@
+.center h2 span{
+    width: 1.94rem;
+    height: .58rem;
+    font-size: .48rem;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: .36rem;
+    letter-spacing: 0px;
+    color: #333333;
+    margin: 1.21rem auto;
+    display: block;
+    border-bottom: .06rem solid #333333;
+}
+.text{
+    border:solid 2px #ccc;
+    width:6rem;
+    height:.7rem;
+    background:url("../img/phone.png")  ;
+    background-size: .4rem .55rem;
+    background-repeat: no-repeat;
+    background-position:.21rem .07rem  ;
+    margin: 0px auto;
+    border-radius: .15rem;
+}
+.text input{
+    float:left;
+    border:none;
+    background:none;
+    line-height:.7rem;
+    width:100%;
+    text-indent:.82rem;
+    font-size: .28rem;
+    color:#999999;
+}
+.code{
+    width:6rem;
+    height:.7rem;
+    margin: .2rem auto;
+}
+.code img{
+    width: 2rem;
+    height: .66rem;
+    float: right;
+    margin-top: .05rem;
+}
+.code input{
+    width: 3.6rem;
+    height: .66rem;
+    float: left;
+    border:solid 2px #ccc;
+    font-size: .28rem;
+    color:#999999;
+    text-indent:.32rem;
+}
+.next{
+    width: 100%;
+    margin-top: 2rem;
+}

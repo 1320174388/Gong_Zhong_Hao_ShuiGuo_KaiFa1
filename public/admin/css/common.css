@@ -1,0 +1,58 @@
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+    margin:0;
+    padding:0;
+    }
+   a {
+    text-decoration: none;
+    }
+    ul,ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+   }
+   img {vert-align: top;}
+
+   a, input, button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   }
+
+   input，textarea{outline:none}
+   input, button {
+       outline: none;
+       -webkit-tap-highlight-color: rgba(0,0,0,0);
+   }
+   body {
+       margin: 0;
+       -webkit-user-select: none;
+   }
+  body * {
+      -webkit-user-select: none;
+      font-family: Helvetica;
+  }
+body {
+    -webkit-text-size-adjust: 100%;
+}
+header{
+    width: 7.5rem;
+    padding-top: .4rem;
+    height: .88rem;
+    background-color: #000;
+
+}
+    header p{
+
+        font-family: MicrosoftYaHei;
+        font-size: .36rem;
+        color: #ffffff;
+        line-height: .88rem;
+        text-align: center;
+        position: relative;
+    }
+header p img{
+    width: .26rem;
+   left: .22rem;
+    top: .2rem;
+    vertical-align: middle;
+    position: absolute;
+
+}

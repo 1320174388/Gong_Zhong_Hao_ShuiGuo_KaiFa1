@@ -1,0 +1,138 @@
+/**
+ * 版权声明 :  地老天荒科技有限公司
+ * 文件名称 :  adminRegister.css     
+ * 创 建 者   :  Cheng Tao
+ * 创建日期 :  2018/07/06 10:19
+ * 文件描述 :  公众号web页面后台注册页面css文件
+ * 历史记录 :  ----------------------- 
+ */
+.wrap{
+	padding: 3rem 1.875rem 0;
+	position: relative;
+	z-index: 1;
+}
+/*标题容器样式*/
+.title-wrap{
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+/*标题下划线样式*/
+.title-down-line{
+	width: 5rem;
+	height: 0.15rem;
+	margin: 0 auto;
+	background: #4d4f66;
+	margin-bottom: 2.5rem;
+}
+/*文本框容器样式*/
+.inpt-wrap{
+	width: 100%;
+	position: relative;
+}
+/*用户名图标样式*/
+.user-name{
+	position: absolute;
+	left: 0.52rem;
+	top: 0.42rem;
+	width: 0.65rem;
+	height: 0.9rem;
+}
+/*电话图标样式*/
+.phone{
+	position: absolute;
+	left: 0.52rem;
+	top: 0.34rem;
+	width: 0.6rem;
+	height: 1rem;
+}
+/*密码图标样式*/
+.lock{
+	position: absolute;
+	left: 0.52rem;
+	top: 0.42rem;
+	width: 0.67rem;
+	height: 0.82rem;
+}
+/*文本框标签样式*/
+input{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background: #f8f8f8;
+	height: 1.65rem;
+	font-size: 0.7rem;
+	box-sizing: border-box;
+}
+/*文本框placeholder字体样式*/
+input::-webkit-input-placeholder{
+    color:#999;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+	color:#999;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#999;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#999;
+}
+/*文本框样式*/
+.inpt{
+	width: 100%;
+	margin-bottom: 1rem;
+	padding-left: 1.5rem;
+}
+/*验证码文本框样式*/
+.inpt-verification{
+	width: 9rem;
+	padding-left: 1.5rem;
+}
+/*发送验证样式*/
+.verification-code{
+	width: 5rem;
+	height: 1.65rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	float: right;
+	box-sizing: border-box;
+	text-align: center;
+	color: #333;
+	line-height: 1.4rem;
+	font-size: 0.7rem;
+}
+.sub-inpt{
+	width: 15rem;
+	height: 2.2rem;
+	margin-top: 2.5rem;
+	background: #4D4F66;
+	color: #fff;
+	font-size: 0.9rem;
+}
+/*注册成功弹出框容器样式*/
+.reg-success-wrap{
+	background: rgba(133,133,133,0.7);
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+	padding: 11.675rem 0;
+}
+/*注册成功弹出框样式*/
+.register-success{
+	width: 15rem;
+	height: 10rem;
+	padding: 1rem;
+	background: #fff;
+	margin: 0 auto;
+	text-align: center;
+}
+.x-icon{
+	width: 0.775rem;
+	float: right;
+}
+.success-icon{
+	width: 2.65rem;
+	margin: 1rem 0;
+}

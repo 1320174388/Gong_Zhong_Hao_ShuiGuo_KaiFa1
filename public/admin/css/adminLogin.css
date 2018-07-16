@@ -1,0 +1,93 @@
+/**
+ * 版权声明 :  地老天荒科技有限公司
+ * 文件名称 :  adminLogin.css     
+ * 创 建 者   :  Cheng Tao
+ * 创建日期 :  2018/07/06 10:19
+ * 文件描述 :  公众号web页面后台登录页面css文件
+ * 历史记录 :  ----------------------- 
+ */
+.wrap{
+	padding: 3rem 1.875rem 0;
+	
+}
+.title-wrap{
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 0.5rem;
+}
+.title-down-line{
+	width: 5rem;
+	height: 0.15rem;
+	margin: 0 auto;
+	background: #4d4f66;
+	margin-bottom: 2.5rem;
+}
+.inpt-wrap{
+	width: 100%;
+	position: relative;
+}
+.phone{
+	position: absolute;
+	left: 0.52rem;
+	top: 0.34rem;
+	width: 0.6rem;
+	height: 1.1rem;
+}
+.lock{
+	position: absolute;
+	left: 0.52rem;
+	top: 0.42rem;
+	width: 0.67rem;
+	height: 0.82rem;
+}
+input{
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background: #f8f8f8;
+	height: 1.65rem;
+	font-size: 0.7rem;
+	box-sizing: border-box;
+}
+input::-webkit-input-placeholder{
+    color:#999;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+	color:#999;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#999;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#999;
+}
+.inpt{
+	width: 100%;
+	margin-bottom: 1rem;
+	padding-left: 1.5rem;
+}
+.inpt-verification{
+	width: 9rem;
+}
+.verification-code{
+	width: 5rem;
+	height: 1.65rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	float: right;
+	box-sizing: border-box;
+	text-align: center;
+	color: #666;
+	line-height: 1.65rem;
+	font-size: 1rem;
+}
+.sub-inpt{
+	width: 15rem;
+	height: 2.2rem;
+	margin-top: 2.5rem;
+	background: #4D4F66;
+	color: #fff;
+	font-size: 0.9rem;
+}
+
+

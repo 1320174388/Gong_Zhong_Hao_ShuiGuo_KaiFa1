@@ -1,0 +1,184 @@
+/**
+ * 版权声明 :  地老天荒科技有限公司
+ * 文件名称 :  storeManage.css     
+ * 创 建 者   :  Cheng Tao
+ * 创建日期 :  2018/07/13 16:09
+ * 文件描述 :  公众号web页面店铺管理css文件
+ * 历史记录 :  ----------------------- 
+ */
+body{
+	color: #fff;
+}
+.wrap{
+	position: relative;
+}
+/*选项卡*/
+.card-wrap{
+	display: flex;
+}
+.id-card{
+	width: 33.33%;
+	text-align: center;
+	height: 2.25rem;
+	line-height: 2.25rem;
+	font-size: 0.6rem;
+	border-bottom: 1px solid #383f5a;
+	border-right: 1px solid #383f5a;
+	background: #4D4F66;
+}
+.id-card:first-child{
+	font-size: 0.75rem;
+	background: #383f5a;
+}
+.id-card:last-child{
+	border-right: none;
+}
+.content-wrap{
+	padding: 0.45rem 0 0;
+	display: none;
+	z-index: 2;
+}
+/*订单类型*/
+.order-type{
+	position: absolute;
+	width: 6.3rem;
+	height: 5rem;
+	background: #4D4F66;
+	right: 0;
+	top: 2.225rem;
+	text-align: center;
+	line-height: 1rem;
+	display: none;
+	z-index: 3;
+}
+/*店铺管理*/
+.store-wrap{
+	height: 6.25rem;
+	background: #383f5a;
+	box-shadow: 0px 4px 5px 0px 
+		rgba(33, 35, 54, 0.75);
+	border-radius: 0.15rem;
+	color: #fff;
+	padding: 0.8rem;
+	display: flex;
+	margin-bottom: 0.5rem;
+	position: relative;
+}
+.store-img{
+	width: 4.6rem;
+	height: 4.625rem;
+}
+.store-text-wrap{
+	width: 9.5rem;
+	padding: 0.45rem 0 0 0.575rem;
+	line-height: 1rem;
+	font-size: 0.6rem;
+}
+/*正常营业*/
+.business-success{
+	color: #0f0;
+}
+/*请联系管理员开启店铺*/
+.business-close{
+	color: #ff0707;
+}
+/*店铺添加*/
+.type-add-wrap {
+	position: fixed;
+	top: 27.575rem;
+	left: 0;
+	height: 2.25rem;
+	width: 100%;
+	text-align: center;
+	line-height: 2.25rem;
+	background-color: #383F5A;
+}
+
+.add-icon {
+	width: 1.2rem;
+}
+/*商品内容*/
+.store-wrap{
+	height: 6.25rem;
+	background: #383f5a;
+	box-shadow: 0px 4px 5px 0px 
+		rgba(33, 35, 54, 0.75);
+	border-radius: 0.15rem;
+	color: #fff;
+	padding: 0.8rem;
+	display: flex;
+	margin-bottom: 0.5rem;
+	position: relative;
+}
+.time-wrap{
+	height: 1.6rem;
+	line-height: 1.6rem;
+	padding: 0 0.8rem;
+	border-bottom: 1px solid #fff;
+	font-size: 0.45rem;
+	background: #383F5A;
+}
+.store-img{
+	width: 4.6rem;
+	height: 4.625rem;
+}
+.store-text-wrap{
+	width: 9.5rem;
+	padding: 0.1rem 0 0 0.575rem;
+	line-height: 1.1rem;
+	font-size: 0.6rem;
+}
+
+.type-manage-img {
+	position: absolute;
+	width: 1.125rem;
+	top: 1.575rem;
+	right: 0.7rem;
+}
+
+.type-manage-img:last-child {
+	top: 3.575rem;
+}
+/*订单内容*/
+.order-wrap{
+	background-color: #383f5a;
+	box-shadow: 0px 4px 5px 0px 
+		rgba(33, 35, 54, 0.75);
+	position: relative;
+	margin-bottom: 0.5rem;
+}
+.order-status{
+	height: 1.775rem;
+	line-height: 0.7rem;
+	padding: 0.25rem 0.75rem 0.2rem 0.775rem;
+	font-size: 0.5rem;
+	border-bottom: 1px solid #fff;
+}
+.order-img-wrap{
+	display: flex;
+	padding: 0.625rem 0.75rem;
+}
+.order-img{
+	width: 4.6rem;
+	height: 4.625rem;
+}
+.order-price{
+	position: absolute;
+	top: 6.25rem;
+	right: 0.75rem;
+}
+.order-send{
+	height: 2.3rem;
+	padding: 0.375rem 0.75rem;
+	text-align: right;
+	border-top: 1px solid #fff;
+}
+.order-btn{
+	width: 3.75rem;
+	height: 1.5rem;
+	background: transparent;
+	border: 1px solid #fff;
+	border-radius: 0.375rem;
+	font-size: 0.6rem;
+	color: #fff;
+}

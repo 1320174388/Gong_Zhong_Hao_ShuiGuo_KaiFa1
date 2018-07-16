@@ -1,0 +1,258 @@
+/**
+ * 版权声明 :  地老天荒科技有限公司
+ * 文件名称 :  adminJurJob.css     
+ * 创 建 者   :  Cheng Tao
+ * 创建日期 :  2018/07/06 10:19
+ * 文件描述 :  公众号web页面后台首页css文件
+ * 历史记录 :  ----------------------- 
+ */
+body{
+	background: #4d4f66;
+	color: #fff;
+}
+/*头部日期*/
+header{
+	width: 100%;
+	height: 3rem;
+	border-bottom: 1px solid #fff;
+	padding-top: 0.675rem;
+	box-sizing: border-box;
+}
+.time-border{
+	width: 10rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	padding-left: 1.625rem;
+	border: 1px solid #fff;
+	margin: 0 auto;
+	border-radius: 6px;
+}
+/*选项卡*/
+.card-wrap{
+	display: flex;
+}
+.id-card{
+	flex-grow: 1;
+	text-align: center;
+	height: 2.25rem;
+	line-height: 2.25rem;
+	font-size: 0.6rem;
+	border-bottom: 1px solid #383f5a;
+	border-right: 1px solid #383f5a;
+}
+.id-card:first-child{
+	font-size: 0.75rem;
+	background: #383f5a;
+}
+.id-card:last-child{
+	border-right: none;
+}
+/*申请和管理内容容器*/
+.content-wrap{
+	padding: 0.55rem 0 0;
+	display: none;
+}
+.apply-wrap{
+	background: #383f5a;
+	margin: 0 auto 1.675rem;
+	height: 5.25rem;
+	padding: 1rem 0.85rem 0.8rem;
+	width: 17.15rem;
+	box-shadow: 0px 4px 5px 0px rgba(33, 35, 54, 0.75);
+	position: relative;
+	border-radius: 6px;
+}
+.apply-content{
+	width: 13rem;
+	margin-bottom: 0.8rem;
+}
+.apply-content:last-child{
+	margin-bottom: 0;
+}
+.apply-btn{
+	width: 3rem;
+	height: 1rem;
+	border: 1px solid #fff;
+	border-radius: 0.45rem;
+	text-align: center;
+	line-height: 1rem;
+	font-size: 0.45rem;
+	position: absolute;
+	top: 1.325rem;
+	right: 0.7rem;
+}
+.apply-btn:last-child{
+	top: 2.925rem;
+	background: #4d4f66;
+}
+/*管理内icon图标*/
+.manage-icon{
+	width: 1.125rem;
+	position: absolute;
+	top: 1.3rem;
+	right: 0.85rem;
+}
+.manage-icon:last-child{
+	top: 3.075rem;
+}
+/*职位内容容器*/
+.job-wrap{
+	background: #383f5a;
+	margin: 0 auto 1.675rem;
+	height: 6.8rem;
+	padding: 1rem 0.85rem 0;
+	width: 17.15rem;
+	box-shadow: 0px 4px 5px 0px rgba(33, 35, 54, 0.75);
+	position: relative;
+	border-radius: 6px;
+}
+.title{
+	margin-bottom: 1rem;
+}
+.detail{
+	width: 9.625rem;
+}
+/*编辑和删除图标样式*/
+.edit-icon{
+	width: 1.125rem;
+	position: absolute;
+	top: 1.3rem;
+	right: 0.85rem;
+}
+.remove-icon{
+	width: 1.125rem;
+	position: absolute;
+	top: 3.85rem;
+	right: 0.85rem;
+}
+/*添加职位样式*/
+.add-job{
+	background: #383f5a;
+	margin: 0 auto;
+	height: 2.2rem;
+	padding: 1rem 0.85rem 0;
+	width: 17.15rem;
+	box-shadow: 0px 4px 5px 0px rgba(33, 35, 54, 0.75);
+	padding: 0.5rem 0 0;
+	border-radius: 6px;
+}
+.circular{
+	width: 1.2rem;
+	height: 1.2rem;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 1.1rem;
+	font-size: 1.2rem;
+	font-weight: bolder;
+}
+/*管理编辑*/
+.alert-wrap{
+	height: 100vh;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background: rgba(51, 51, 51, 0.7);
+	padding-top: 7.15rem;
+}
+.manage-edit-content{
+	width: 15rem;
+	height: 12.8rem;
+	background: #383f5a;
+	margin: 0 auto;
+	border-radius: 6px;
+	padding: 1rem 1.25rem 0;
+}
+.edit-content{
+	width: 12.5rem;
+	margin-bottom: 0.7rem;
+	height: 1.1rem;
+	border-bottom: 1px solid #fff;
+	padding-left: 0.8rem;
+}
+.edit-input{
+	border: none;
+	background: transparent;
+	outline: none;
+	color: #fff;
+}
+.job-jur{
+	padding-left: 0.8rem;
+}
+.jur-btn{
+	width: 3rem;
+	height: 1rem;
+	border: 1px solid #fff;
+	text-align: center;
+	line-height: 1rem;
+	border-radius:0.5rem;
+	margin: 0.6rem 1.125rem 1.325rem 0;
+}
+.jur-btn:last-child{
+	margin-right: 0;
+}
+.edit-btn-footer{
+	width: 5.25rem;
+	height: 2.2rem;
+	border: 1px solid #fff;
+	border-radius: 0.15rem;
+	background: transparent;
+	margin-right: 1.675rem;
+	color: #fff;
+	font-size: 0.75rem;
+}
+.edit-btn-footer:last-child{
+	margin-right: 0;
+	background: #4D4F66;
+	border: 0;
+}
+/*管理禁用*/
+.manage-disabled-wrap{
+	width: 15rem;
+	height: 10rem;
+	background: #4D4F66;
+	padding: 0.75rem;
+	margin: 0 auto;
+	position: relative;
+}
+.x-icon{
+	width: 0.775rem;
+	float: right;
+}
+.dis-text{
+	text-align: center;
+	font-size: 0.9rem;
+	margin: 2.25rem 0 2.4rem;
+}
+.disabled-btn-footer{
+	width: 5.25rem;
+	height: 2.2rem;
+	border: 1px solid #fff;
+	border-radius: 0.15rem;
+	background: transparent;
+	margin-right: 1.675rem;
+	color: #fff;
+	font-size: 0.75rem;
+}
+.disabled-btn-footer:last-child{
+	margin-right: 0;
+	background: #383F5A;
+	border: 0;
+}
+/*职位编辑和添加弹出框内职位详情样式*/
+.job-detail-title{
+	padding-left: 0.8rem;
+}
+.job-detail-text{
+	width: 12.5rem;
+	height: 3.75rem;
+	border-radius: 0.15rem;
+	border: 1px solid #fff;
+	background: transparent;
+	color: #fff;
+	margin: 0.425rem 0 0.525rem;
+	outline: none;
+	padding: 0 0.8rem;
+	box-sizing: border-box;
+}
