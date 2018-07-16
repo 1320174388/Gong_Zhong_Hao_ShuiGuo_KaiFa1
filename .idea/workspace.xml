@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f79799f9-2ee3-4cf0-a924-10db165b3e72" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/application/right_module/working_version/v1/validator/ApplyValidate.php" afterPath="$PROJECT_DIR$/application/right_module/working_version/v1/validator/ApplyValidate.php" />
+      <change beforePath="$PROJECT_DIR$/application/right_module/working_version/v1/library/SerificationLibrary.php" afterPath="$PROJECT_DIR$/application/right_module/working_version/v1/library/SerificationLibrary.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +16,51 @@
       <file leaf-file-name="SerificationLibrary.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SerificationLibrary.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="149">
+              <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
               <folding>
                 <element signature="e#7#179#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="qcloudSmsLibrary.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/qcloudSmsLibrary.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="20" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsMultiSender.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsMultiSender.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsStatusPuller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsStatusPuller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmsVoiceVerifyCodeSender.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsVoiceVerifyCodeSender.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,46 +115,6 @@
               <folding>
                 <element signature="e#6#188#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SmsMultiSender.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsMultiSender.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SmsStatusPuller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsStatusPuller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SmsVoicePromptSender.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsVoicePromptSender.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TtsVoiceSender.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/TtsVoiceSender.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -263,12 +263,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1531711682046</updated>
-      <workItem from="1531711684543" duration="10702000" />
+      <workItem from="1531711684543" duration="11259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10702000" />
+    <option name="totallyTimeSpent" value="11259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -364,22 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsMultiSender.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsStatusPuller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsVoicePromptSender.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -440,10 +424,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/qcloudSmsLibrary.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="20" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsMultiSender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsStatusPuller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SmsVoiceVerifyCodeSender.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/library/SerificationLibrary.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="149">
+          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding>
             <element signature="e#7#179#0#PHP" expanded="true" />
           </folding>
