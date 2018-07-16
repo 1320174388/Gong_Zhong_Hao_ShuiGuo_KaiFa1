@@ -25,12 +25,12 @@ class ApplyDao implements ApplyInterface
      * 输  出 : [ 'msg' => 'error',  'data' => false ]
      * 创  建 : 2018/6/28 15:15
      */
-	public function applyCreate($applyName,$applyPassward,$applyPhone)
+	public function applyCreate($applyName,$applyPassward,$applyPhone,$token)
 	{
 		// 实例化用户申请model
 		$ApplyModel = new ApplyModel;
 		// 自动生成管理员身份验证
-		$ApplyModel->apply_token     = righeToken();
+		$ApplyModel->apply_token    = $token;
 		// 获取用户申请的用户名
 		$ApplyModel->apply_name     = $applyName;
 		// 获取用户申请的密码
@@ -38,7 +38,7 @@ class ApplyDao implements ApplyInterface
 		// 获取用户申请的手机号
 		$ApplyModel->apply_phone    = $applyPhone;
 		// 用户申请时间
-		$ApplyModel->apply_time	   = time();
+		$ApplyModel->apply_time	    = time();
 		// 保存数据库
 		$res = $ApplyModel->save();
 		// 验证数据
