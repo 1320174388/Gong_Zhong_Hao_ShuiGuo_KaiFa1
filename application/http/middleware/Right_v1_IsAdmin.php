@@ -28,7 +28,7 @@ class Right_v1_IsAdmin
         // 获取域名独立Session信息
         $strMd5 = md5($_SERVER["SERVER_NAME"].'login_admin_token');
         // 判断Session信息是否存在
-        if(Session::get($strMd5)){
+        if(!Session::get($strMd5)){
             // 拼接路由字符串
             $projectUrl.= '/v1/right_module/login_admin';
             die("<script>window.location.replace({$projectUrl});</script>");
