@@ -103,7 +103,7 @@ class ApplyController extends Controller
         // 验证数据
         if(!$res) return returnResponse(3,'申请失败');
         // 返回数据
-        return returnResponse(0,'申请失败');
+        return returnResponse(0,'申请成功',true);
     }
 
     /**
