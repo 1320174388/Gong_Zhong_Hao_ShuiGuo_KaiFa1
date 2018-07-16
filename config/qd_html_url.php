@@ -9,7 +9,7 @@
  */
 return [
     // Http://地址
-    'HTTP_URL' => 'http://pingguogongzhonghao.dlaotianhuang.com',
+    'HTTP_URL' => 'http://pingguogongzhonghaohtml.dlaotianhuang.com',
     // 管理员登录后台操作
     'Admin_Login' => '/admin/adminLogin.html',
     // 用户申请管理员操作页面
