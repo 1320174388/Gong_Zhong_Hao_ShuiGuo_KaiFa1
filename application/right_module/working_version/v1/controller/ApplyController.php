@@ -57,8 +57,13 @@ class ApplyController extends Controller
         $array = (new LoginLibrary())->loginLibrary($request->get('code'));
         // 验证token值
         if($array['msg']=='error') return '<h1>身份验证失败<h1>';
+        // 获取用户申请管理员操作页面地址
+        $url = config('qd_html_url.HTTP_URL');
+        $url.= config('qd_html_url.Admin_Register');
         // 显示注册页面视图
-        return "<script>window.location.replace(\"'.$url.'\");</script>";
+        return "<script>
+                    window.location.replace('{$url}?token={$array['data']}');
+               </script>";
     }
 
     /**
