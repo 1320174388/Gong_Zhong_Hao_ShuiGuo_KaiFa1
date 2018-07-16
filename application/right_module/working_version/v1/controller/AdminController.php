@@ -12,5 +12,16 @@ use think\Controller;
 
 class AdminController extends Controller
 {
-
+    /**
+     * 名  称 : loginAdmin()
+     * 功  能 : 公众号后台登录页面
+     * 变  量 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : --------------------------------------
+     * 创  建 : 2018/07/16 09:54
+     */
+    public function loginAdmin()
+    {
+        return 123;
+    }
 }

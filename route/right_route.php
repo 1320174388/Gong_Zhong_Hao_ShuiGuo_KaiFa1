@@ -14,8 +14,7 @@
 // : 传值方式：GET， 功能：权限管理，管理员找回密码验证手机号
 // : 传值方式：GET， 功能：权限管理，给用户发送管理员找回密码验证码
 // : 传值方式：PUT， 功能：权限管理，管理员修改密码接口
-// : 传值方式：GET， 功能：公众号后台初始化接口
-// : 传值方式：GET， 功能：获取管理员可管理权限接口
+// : 传值方式：GET， 功能：权限管理，管理员登录接口
 // +---------------------------------------------------
 Route::post(
     'v1/right_module/apply_route',
@@ -38,22 +37,29 @@ Route::put(
     'right_module/v1.controller.ResetController/resetPassword'
 );
 Route::get(
-    'v1/right_module/obtain_route',
-    'right_module/v1.controller.ModuleController/moduleRoute'
-);
-Route::get(
-    'v1/right_module/obtain_module',
-    'right_module/v1.controller.ModuleController/obtainModule'
+    'v1/right_module/login_admin',
+    'right_module/v1.controller.AdminController/loginAdmin'
 );
 // +---------------------------------------------
 // : 后台接口
 // +---------------------------------------------
 Route::group('v1/right_module/', function(){
     /**
+     *
+     * 传值方式：GET， 功能：公众号后台初始化接口
+     * 传值方式：GET， 功能：获取管理员可管理权限接口
      * 传值方式：GET， 功能：获取所有权限管理列表数据
      */
     Route::get(
-        'right_list/:token',
+        'obtain_route',
+        'right_module/v1.controller.ModuleController/moduleRoute'
+    );
+    Route::get(
+        'obtain_module',
+        'right_module/v1.controller.ModuleController/obtainModule'
+    );
+    Route::get(
+        'right_list',
         'right_module/v1.controller.RightController/rightList'
     );
-});
+})->middleware('Right_v1_IsAdmin');
