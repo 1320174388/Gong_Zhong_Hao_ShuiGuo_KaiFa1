@@ -35,6 +35,6 @@ class AdminController extends Controller
      */
     public function loginSign()
     {
-        
+
     }
 }

@@ -17,6 +17,19 @@ use app\right_module\working_version\v1\library\qcloudSmsLibrary;
 class ApplyController extends Controller
 {
     /**
+     * 名  称 : applyRegister()
+     * 功  能 : 显示管理员注册页面
+     * 变  量 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : --------------------------------------
+     * 创  建 : 2018/07/16 11:15
+     */
+    public function applyRegister()
+    {
+        return view('/v1/adminRegister');
+    }
+
+    /**
      * 名  称 : applyInit()
      * 功  能 : 执行用户申请管理员操作
      * 变  量 : --------------------------------------
