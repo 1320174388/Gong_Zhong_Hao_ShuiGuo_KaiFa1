@@ -54,6 +54,6 @@ class AdminController extends Controller
      */
     public function applyList()
     {
-        
+        // 获取所有申请管理员数据
     }
 }
