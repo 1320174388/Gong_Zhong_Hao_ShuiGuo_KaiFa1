@@ -13,6 +13,7 @@ use think\Request;
 use app\right_module\working_version\v1\service\ApplyService;
 use app\right_module\working_version\v1\validator\ApplyValidate;
 use app\right_module\working_version\v1\library\qcloudSmsLibrary;
+use app\login_module\working_version\v1\library\LoginLibrary;
 
 class ApplyController extends Controller
 {
@@ -52,12 +53,13 @@ class ApplyController extends Controller
      */
     public function applyRegister(Request $request)
     {
-        // 通过code换取网页授权access_token显示首页
-        $array = (new LoginLibrary())->loginLibrary($request->get('code'));
-        // 验证token值
-        if($array['msg']=='error') return '<h1>身份验证失败<h1>';
-        // 显示注册页面视图
-        return view('/v1/adminRegister',['admin_token'=>$array['data']]);
+//        // 通过code换取网页授权access_token显示首页
+//        $array = (new LoginLibrary())->loginLibrary($request->get('code'));
+//        // 验证token值
+//        if($array['msg']=='error') return '<h1>身份验证失败<h1>';
+//        // 显示注册页面视图
+//        return view('/v1/adminRegister',['admin_token'=>$array['data']]);
+        return view('/v1/adminRegister',['admin_token'=>'admin_token']);
     }
 
     /**
