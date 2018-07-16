@@ -9,6 +9,7 @@
  */
 namespace app\right_module\working_version\v1\controller;
 use think\Controller;
+use app\right_module\working_version\v1\service\ApplyService;
 
 class AdminController extends Controller
 {
@@ -55,5 +56,7 @@ class AdminController extends Controller
     public function applyList()
     {
         // 获取所有申请管理员数据
+        $list = (new ApplyService())->applyGet();
+        
     }
 }
