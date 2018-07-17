@@ -92,15 +92,26 @@ class RightDao
         // 处理数据
         $RightModel->role_name = $name;
         $RightModel->role_info = $info;
-        $arr = array();
-        foreach($table as $k=>$v){
-            $arr[$k]=[
-                'role_index'=>userToken(),
-                'right_index'=>$v
-            ];
+        $right = $table::where('role_index', $table)->find();
+        // 启动事务
+        Db::startTrans();
+        try {
+            $table::get($right)->delete();
+            $arr = array();
+            foreach($table as $k=>$v){
+                $arr[$k]=[
+                    'role_index'=>userToken(),
+                    'right_index'=>$v
+                ];
+            }
+            $rights = Db::table($table)->insertAll($arr);
+            if(!$rights) return returnData('error',false);
+        } catch (\Exception $e) {
+            // 回滚事务
+            Db::rollback();
+            // 验证数据
+            return returnData('error','删除失败');
         }
-        $rights = Db::table($table)->insertAll($arr);
-        if(!$rights) return returnData('error',false);
         // 保存数据
         $res = $RightModel->save();
         if(!$res) return returnData('error');
