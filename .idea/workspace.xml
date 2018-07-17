@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f79799f9-2ee3-4cf0-a924-10db165b3e72" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/application/common.php" afterPath="$PROJECT_DIR$/application/common.php" />
-      <change beforePath="$PROJECT_DIR$/application/right_module/config/v1_tableName.php" afterPath="$PROJECT_DIR$/application/right_module/config/v1_tableName.php" />
       <change beforePath="$PROJECT_DIR$/application/right_module/working_version/v1/controller/RightController.php" afterPath="$PROJECT_DIR$/application/right_module/working_version/v1/controller/RightController.php" />
-      <change beforePath="$PROJECT_DIR$/application/right_module/working_version/v1/dao/RightDao.php" afterPath="$PROJECT_DIR$/application/right_module/working_version/v1/dao/RightDao.php" />
       <change beforePath="$PROJECT_DIR$/application/right_module/working_version/v1/service/RightServer.php" afterPath="$PROJECT_DIR$/application/right_module/working_version/v1/service/RightServer.php" />
-      <change beforePath="$PROJECT_DIR$/route/right_route.php" afterPath="$PROJECT_DIR$/route/right_route.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="RightController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/controller/RightController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+            <state relative-caret-position="-166">
+              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <element signature="e#241#301#0#PHP" expanded="true" />
               </folding>
@@ -30,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RightServer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RightServer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/service/RightServer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+            <state relative-caret-position="534">
+              <caret line="62" column="19" lean-forward="false" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
               <folding>
                 <element signature="e#6#160#0#PHP" expanded="true" />
               </folding>
@@ -42,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RightDao.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RightDao.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/dao/RightDao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="97" column="35" lean-forward="true" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+            <state relative-caret-position="3675">
+              <caret line="105" column="15" lean-forward="true" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="15" />
               <folding>
                 <element signature="e#6#158#0#PHP" expanded="true" />
               </folding>
@@ -118,9 +114,9 @@
         <option value="$PROJECT_DIR$/application/common.php" />
         <option value="$PROJECT_DIR$/route/right_route.php" />
         <option value="$PROJECT_DIR$/application/right_module/config/v1_tableName.php" />
-        <option value="$PROJECT_DIR$/application/right_module/working_version/v1/service/RightServer.php" />
         <option value="$PROJECT_DIR$/application/right_module/working_version/v1/dao/RightDao.php" />
         <option value="$PROJECT_DIR$/application/right_module/working_version/v1/controller/RightController.php" />
+        <option value="$PROJECT_DIR$/application/right_module/working_version/v1/service/RightServer.php" />
       </list>
     </option>
   </component>
@@ -267,7 +263,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24861000" />
+    <option name="totallyTimeSpent" value="27521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -656,26 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/service/RightServer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="62" column="18" lean-forward="true" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
-          <folding>
-            <element signature="e#6#160#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/controller/RightController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding>
-            <element signature="e#241#301#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/dao/ApplyInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
@@ -686,10 +662,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/dao/RightDao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="97" column="35" lean-forward="true" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+        <state relative-caret-position="3675">
+          <caret line="105" column="15" lean-forward="true" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="15" />
           <folding>
             <element signature="e#6#158#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/controller/RightController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <element signature="e#241#301#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/right_module/working_version/v1/service/RightServer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="62" column="19" lean-forward="false" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+          <folding>
+            <element signature="e#6#160#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

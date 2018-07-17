@@ -10,6 +10,7 @@
 namespace app\right_module\working_version\v1\controller;
 use app\right_module\working_version\v1\service\RightServer;
 use think\Controller;
+use think\Request;
 
 class RightController extends Controller
 {
@@ -68,7 +69,7 @@ class RightController extends Controller
         if(!$name )   return returnResponse(1,'请输入职位名称');
         if(!$info) return returnResponse(1,'请输入职位介绍');
         // 引入RoleService逻辑
-        $res=(new RightServer())->editRole($name,$info);
+        $res=(new RightServer())->rightPut($name,$info);
         // 验证返回数据
         if($res['msg']=='error') return returnResponse(3,$res['data']);
         // 返回数据
