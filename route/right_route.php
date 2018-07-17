@@ -74,15 +74,15 @@ Route::group('v1/right_module/', function(){
         'right_module/v1.controller.AdminController/applyList'
     );
     Route::post(
-        'right_list',
+        'right_Add',
         'right_module/v1.controller.RightController/rightAdd'
     );
     Route::put(
-        'right_list',
+        'right_Put',
         'right_module/v1.controller.RightController/rightPut'
     );
     Route::DELETE(
-        'right_list',
+        'right_Del',
         'right_module/v1.controller.RightController/rightDel'
     );
     Route::put(
