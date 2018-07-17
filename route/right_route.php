@@ -72,4 +72,8 @@ Route::group('v1/right_module/', function(){
         'apply_list',
         'right_module/v1.controller.AdminController/applyList'
     );
+    Route::put(
+        'apply_add',
+        'right_module/v1.controller.AdminController/applyCreate'
+    );
 })->middleware('Right_v1_IsAdmin');
