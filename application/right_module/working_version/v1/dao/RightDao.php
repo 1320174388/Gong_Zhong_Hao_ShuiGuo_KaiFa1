@@ -11,7 +11,7 @@
 namespace app\right_module\working_version\v1\dao;
 
 use app\right_module\working_version\v1\model\RightModel;
-
+use think\Db;
 class RightDao
 {
     /**
@@ -19,7 +19,7 @@ class RightDao
      * 功  能 : 声明：查询职位
      * 变  量 : --------------------------------------
      * 输  入 : --------------------------------------
-     * 输  出 : --------------------------------------
+     * 输  出 : [ 'msg'=>'success', 'data'=>$user ]
      * 创  建 : 2018/07/16 21:45
      */
     public function rightList()
@@ -37,8 +37,9 @@ class RightDao
      * 名  称 : rightList()
      * 功  能 : 声明：添加职位
      * 变  量 : --------------------------------------
-     * 输  入 : --------------------------------------
-     * 输  出 : --------------------------------------
+     * 输  入 : (string) $name  => '职位名称';
+     * 输  入 : (string) $info  => '权限介绍';
+     * 输  出 : [ 'msg'=>'success', 'data'=>$user ]
      * 创  建 : 2018/07/16 21:45
      */
     public function rightAdd($name,$info)
@@ -55,6 +56,17 @@ class RightDao
         $RightModel->role_time = time();
         // 保存数据库
         $res = $RightModel->save();
+
+        $arr = array();
+        foreach($RightModel as $k=>$v){
+            $arr[$k]=[
+              'role_index'=>userToken(),
+              'right_index'=>$v
+            ];
+        }
+        $table = config('v1_tableName.RightsTable');
+        $rights = Db::table($table)->insertAll($arr);
+        if(!$rights) return returnData('error',false);
         // 验证是否保存成功
         if(!$res){
             return returnData('error');
@@ -67,17 +79,28 @@ class RightDao
      * 名  称 : rightList()
      * 功  能 : 声明：修改职位
      * 变  量 : --------------------------------------
-     * 输  入 : --------------------------------------
-     * 输  出 : --------------------------------------
+     * 输  入 : (string) $name => '职位名称';
+     * 输  入 : (string) $info => '职位介绍';
+     * 输  出 : [ 'msg'=>'success', 'data'=>$res ]
      * 创  建 : 2018/07/16 21:45
      */
     public function rightPut($name,$info)
     {
         // 实例化模型
         $RightModel = new RightModel;
+        $table = config('v1_tableName.RightsTable');
         // 处理数据
         $RightModel->role_name = $name;
         $RightModel->role_info = $info;
+        $arr = array();
+        foreach($table as $k=>$v){
+            $arr[$k]=[
+                'role_index'=>userToken(),
+                'right_index'=>$v
+            ];
+        }
+        $rights = Db::table($table)->insertAll($arr);
+        if(!$rights) return returnData('error',false);
         // 保存数据
         $res = $RightModel->save();
         if(!$res) return returnData('error');
@@ -91,8 +114,8 @@ class RightDao
      * 名  称 : rightList()
      * 功  能 : 声明：删除职位
      * 变  量 : --------------------------------------
-     * 输  入 : --------------------------------------
-     * 输  出 : --------------------------------------
+     * 输  入 : (string) $info => '职位主键';
+     * 输  出 : [ 'msg'=>'success', 'data'=>$res ]
      * 创  建 : 2018/07/16 21:45
      */
     public function rightDel($info)

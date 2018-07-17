@@ -13,5 +13,7 @@ return [
     // 管理员申请表
     'ApplyTable' => 'data_admin_apply',
     // 职位表
-    'RightTable' => 'data_admin_roles'
+    'RightTable' => 'data_admin_roles',
+    // 职位权限关联表
+    'RightsTable' => 'index_role_rights'
 ];

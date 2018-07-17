@@ -18,21 +18,27 @@ class RightController extends Controller
      * 名  称 : rightList()
      * 功  能 : 获取所有职位列表数据
      * 变  量 : --------------------------------------
-     * 输  入 :
-     * 输  出 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : {"errNum":0,"retMsg":"请求成功","retData":true}
      * 创  建 : 2018/07/11 11:34
      */
     public function rightList()
     {
+        // 引入SERVER层逻辑
         $list = (new RightServer())->rightList();
+        if($list['msg']=='error') return returnResponse(1,'当前没有添加职位');
+        // 返回数据
+        return returnResponse(0,'请求成功',$list['data']);
+
     }
 
     /**
      * 名  称 : rightAdd()
      * 功  能 : 添加职位数据
      * 变  量 : --------------------------------------
-     * 输  入 :
-     * 输  出 : --------------------------------------
+     * 输  入 : (string) $name  => '职位名称';
+     * 输  入 : (string) $info  => '职位介绍';
+     * 输  出 : {"errNum":0,"retMsg":"添加成功","retData":true}
      * 创  建 :
      */
     public function rightAdd(Request $request)
@@ -56,8 +62,9 @@ class RightController extends Controller
      * 名  称 : rightPut()
      * 功  能 : 修改职位数据
      * 变  量 : --------------------------------------
-     * 输  入 :
-     * 输  出 : --------------------------------------
+     * 输  入 : (string) $name      => '职位名称';
+     * 输  入 : (string) $info      => '职位介绍';
+     * 输  出 : {"errNum":0,"retMsg":"更新成功","retData":true}
      * 创  建 :
      */
     public function rightPut(Request $request)
@@ -80,8 +87,8 @@ class RightController extends Controller
      * 名  称 : rightDel()
      * 功  能 : 删除职位数据
      * 变  量 : --------------------------------------
-     * 输  入 :
-     * 输  出 : --------------------------------------
+     * 输  入 : (string) $index => '职位标识';
+     * 输  出 : {"errNum":0,"retMsg":"删除成功","retData":true}
      * 创  建 :
      */
     public function rightDel(Request $request)

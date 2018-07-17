@@ -4,7 +4,7 @@
  *  文件名称 :  RightServer.php
  *  创 建 者 :  Shi Rui
  *  创建日期 :  2018/07/7 18:17
- *  文件描述 :
+ *  文件描述 :  处理职位的业务逻辑
  *  历史记录 :  -----------------------
  */
 namespace app\right_module\working_version\v1\service;
@@ -23,8 +23,11 @@ class RightServer
      */
     public function rightList()
     {
+        // 引入DAO层逻辑
         $list = (new RightDao())->rightList();
-
+        // 是否获取到数据
+        if($list['msg']=='error') return returnData('error');
+        // 返回数据格式
         return returnData('success',$list['data']);
     }
 
@@ -62,7 +65,9 @@ class RightServer
     {
         // 引入DAO层逻辑
         $list = (new RightDao())->rightPut($name,$info);
-
+        // 判断是否修改成功
+        if($list['msg']=='error') return returnData('error');
+        //返回数据格式
         return returnData('success',$list['data']);
     }
 
@@ -70,14 +75,17 @@ class RightServer
      * 名  称 : rightDel()
      * 功  能 : 删除职位
      * 变  量 : --------------------------------------
-     * 输  入 : --------------------------------------
-     * 输  出 : --------------------------------------
+     * 输  入 : (string) $info => '职位标识';
+     * 输  出 : [ 'msg'=>'success' , 'data'=>$list['data'] ]
      * 创  建 : 2018/07/16 20:29
      */
     public function rightDel($info)
     {
+        // 删除要删除的权限数据
         $list = (new RightDao())->rightDel($info);
-
-        return returnData('success',$list['data']);
+        // 是否删除成功
+        if($list['msg']=='error') return returnData('error',$list['data']);
+        // 返回数据格式
+        return returnData('success',true);
     }
 }
