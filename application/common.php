@@ -68,3 +68,71 @@ function userToken()
 
     return md5($newStr);
 }
+
+/**
+ * 名  称 : http_get_ip()
+ * 功  能 : 获取客户端IP地址信息
+ * 变  量 : --------------------------------------
+ * 输  入 : --------------------------------------
+ * 输  出 : 单一功能函数，获取客户端IP地址信息
+ * 创  建 : 2018/07/17 11:50
+ */
+function httpGetIp(){
+    //判断服务器是否允许$_SERVER
+    if(isset($_SERVER)){
+        if(isset($_SERVER[HTTP_X_FORWARDED_FOR])){
+            $realip = $_SERVER[HTTP_X_FORWARDED_FOR];
+        }elseif(isset($_SERVER[HTTP_CLIENT_IP])) {
+            $realip = $_SERVER[HTTP_CLIENT_IP];
+        }else{
+            $realip = $_SERVER[REMOTE_ADDR];
+        }
+    }else{
+        //不允许就使用getenv获取
+        if(getenv("HTTP_X_FORWARDED_FOR")){
+            $realip = getenv( "HTTP_X_FORWARDED_FOR");
+        }elseif(getenv("HTTP_CLIENT_IP")) {
+            $realip = getenv("HTTP_CLIENT_IP");
+        }else{
+            $realip = getenv("REMOTE_ADDR");
+        }
+    }
+
+    return $realip;
+}
+
+/**
+ * 名  称 : getLocalIP()
+ * 功  能 : 获取本机IP地址信息
+ * 变  量 : --------------------------------------
+ * 输  入 : --------------------------------------
+ * 输  出 : 单一功能函数，获取本机IP地址信息
+ * 创  建 : 2018/07/17 11:50
+ */
+function getLocalIP() {
+    $preg = "/\A((([0-9]?[0-9])|(1[0-9]{2})|(2[0-4][0-9])|(25[0-5]))\.){3}(([0-9]?[0-9])|(1[0-9]{2})|(2[0-4][0-9])|(25[0-5]))\Z/";
+//获取操作系统为win2000/xp、win7的本机IP真实地址
+    exec("ipconfig", $out, $stats);
+    if (!empty($out)) {
+        foreach ($out AS $row) {
+            if (strstr($row, "IP") && strstr($row, ":") && !strstr($row, "IPv6")) {
+                $tmpIp = explode(":", $row);
+                if (preg_match($preg, trim($tmpIp[1]))) {
+                    return trim($tmpIp[1]);
+                }
+            }
+        }
+    }
+//获取操作系统为linux类型的本机IP真实地址
+    exec("ifconfig", $out, $stats);
+    if (!empty($out)) {
+        if (isset($out[1]) && strstr($out[1], 'addr:')) {
+            $tmpArray = explode(":", $out[1]);
+            $tmpIp = explode(" ", $tmpArray[1]);
+            if (preg_match($preg, trim($tmpIp[0]))) {
+                return trim($tmpIp[0]);
+            }
+        }
+    }
+    return '127.0.0.1';
+}

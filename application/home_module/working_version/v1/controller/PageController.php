@@ -12,5 +12,16 @@ use think\Controller;
 
 class PageController extends Controller
 {
-
+    /**
+     * 名  称 : returnJson()
+     * 功  能 : 没有执行权限
+     * 变  量 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : {"errNum":1,"retMsg":"没有执行权限","retData":false}
+     * 创  建 : 2018/07/17 14:34
+     */
+    public function returnJson()
+    {
+        returnResponse(1,'没有执行权限');
+    }
 }
