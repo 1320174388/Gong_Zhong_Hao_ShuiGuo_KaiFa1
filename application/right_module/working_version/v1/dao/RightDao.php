@@ -44,28 +44,37 @@ class RightDao
      */
     public function rightAdd($name,$info)
     {
-        // 实例化职位模型
-        $RightModel = new RightModel;
-        // 生成职位token身份标识
-        $RightModel->role_index = userToken();
-        // 职位名称
-        $RightModel->role_name = $name;
-        // 职位介绍
-        $RightModel->role_info = $info;
-        // 创建时间
-        $RightModel->role_time = time();
-        // 保存数据库
-        $res = $RightModel->save();
-
-        $arr = array();
-        foreach($RightModel as $k=>$v){
-            $arr[$k]=[
-              'role_index'=>userToken(),
-              'right_index'=>$v
-            ];
+        Db::startTrans();
+        try {
+            // 实例化职位模型
+            $RightModel = new RightModel;
+            // 生成职位token身份标识
+            $RightModel->role_index = userToken();
+            // 职位名称
+            $RightModel->role_name = $name;
+            // 职位介绍
+            $RightModel->role_info = $info;
+            // 创建时间
+            $RightModel->role_time = time();
+            $arr = array();
+            foreach($RightModel as $k=>$v){
+                $arr[$k]=[
+                    'role_index'=>userToken(),
+                    'right_index'=>$v
+                ];
+            }
+            $table = config('v1_tableName.RightsTable');
+            $rights = Db::table($table)->insertAll($arr);
+            // 保存数据库
+            $res = $RightModel->save();
+            if(!$rights) return returnData('error',false);
+        } catch (\Exception $e) {
+            // 回滚事务
+            Db::rollback();
+            // 验证数据
+            return returnData('error','添加失败');
         }
-        $table = config('v1_tableName.RightsTable');
-        $rights = Db::table($table)->insertAll($arr);
+
         if(!$rights) return returnData('error',false);
         // 验证是否保存成功
         if(!$res){
@@ -131,10 +140,29 @@ class RightDao
      */
     public function rightDel($info)
     {
-        // 获取表明
-        $table = config('v1_tableName.RightTable');
+        // 实例化模型
+        $RightModel = new RightModel;
+        $table = config('v1_tableName.RightsTable');
         // 删除权限列表数据
-        $res = RightModel::destroy([$table => $info]);
+        $res = RightModel::destroy([$RightModel => $info]);
+        Db::startTrans();
+        try {
+            $table::get($info)->delete();
+            $arr = array();
+            foreach($table as $k=>$v){
+                $arr[$k]=[
+                    'role_index'=>userToken(),
+                    'right_index'=>$v
+                ];
+            }
+            $rights = Db::table($table)->insertAll($arr);
+            if(!$rights) return returnData('error',false);
+        } catch (\Exception $e) {
+            // 回滚事务
+            Db::rollback();
+            // 验证数据
+            return returnData('error','删除失败');
+        }
         // 验证数据是否删除成功
         if(!$res) return returnData('error','职位删除失败');
         // 返回数据
