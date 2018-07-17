@@ -12,6 +12,12 @@ return [
     'LoginTable' => 'data_home_users',
     // 管理员申请表
     'ApplyTable' => 'data_admin_apply',
+    // 权限表
+    'RightTable' => 'data_admin_roles',
     // 职位表
-    'RightTable' => 'data_admin_roles'
+    'RoleTable'  => 'data_admin_roles',
+    // 管理员表
+    'AdminTable' => 'data_admin_users',
+    // 关联表
+    'AdminRole'  => 'index_user_roles'
 ];

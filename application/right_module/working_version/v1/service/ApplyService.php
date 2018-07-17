@@ -10,6 +10,7 @@
 namespace app\right_module\working_version\v1\service;
 
 use app\right_module\working_version\v1\dao\ApplyDao;
+use app\right_module\working_version\v1\dao\AdminDao;
 
 class ApplyService
 {

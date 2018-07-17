@@ -84,4 +84,8 @@ Route::group('v1/right_module/', function(){
         'right_list',
         'right_module/v1.controller.RightController/rightDel'
     );
+    Route::put(
+        'apply_add',
+        'right_module/v1.controller.AdminController/applyCreate'
+    );
 })->middleware('Right_v1_IsAdmin');
