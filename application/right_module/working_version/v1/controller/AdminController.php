@@ -9,6 +9,7 @@
  */
 namespace app\right_module\working_version\v1\controller;
 use think\Controller;
+use think\Request;
 use app\right_module\working_version\v1\service\ApplyService;
 
 class AdminController extends Controller
@@ -67,14 +68,18 @@ class AdminController extends Controller
      * 名  称 : applyCreate()
      * 功  能 : 添加管理员表数据
      * 变  量 : --------------------------------------
-     * 输  入 : --------------------------------------
+     * 输  入 : (String) $applyToken => '身份令牌';
+     * 输  入 : (Array) $roleIndex  => '职位数组';
      * 输  出 : {"errNum":1,"retMsg":"提示信息","retData":"数据"}
      * 创  建 : 2018/07/16 18:47
      */
-    public function applyCreate()
+    public function applyCreate(Request $request)
     {
+        // 接收申请管理员
+        $applyToken = $request->put('apply_token');
+        $roleIndex  = $request->put('role_index');
         // 获取所有申请管理员数据
-        $add = (new ApplyService())->adminAdd();
+        $add = (new ApplyService())->adminAdd($applyToken,$roleIndex);
         // 验证数据格式
         if($add['msg']=='error') return returnResponse(1,'审核失败');
         // 返回数据格式
