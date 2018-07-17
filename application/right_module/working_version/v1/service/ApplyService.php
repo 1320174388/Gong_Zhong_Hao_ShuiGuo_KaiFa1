@@ -56,4 +56,22 @@ class ApplyService
         // 返回数据
         return returnData('success',$list['data']);
     }
+
+    /**
+     * 名  称 : adminAdd()
+     * 功  能 : 添加管理员表数据
+     * 变  量 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : --------------------------------------
+     * 创  建 : 2018/07/16 19:06
+     */
+    public function adminAdd()
+    {
+        // 添加管理员表数据
+        $add = (new AdminDao())->adminCreate();
+        // 验证数据格式
+        if($add['msg']=='error') return returnData('error');
+        // 返回数据
+        return returnData('success',$add['data']);
+    }
 }

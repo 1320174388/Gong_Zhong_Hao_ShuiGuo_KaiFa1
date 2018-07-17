@@ -62,4 +62,22 @@ class AdminController extends Controller
         // 返回数据
         return returnResponse(0,'请求成功',$list['data']);
     }
+
+    /**
+     * 名  称 : applyCreate()
+     * 功  能 : 添加管理员表数据
+     * 变  量 : --------------------------------------
+     * 输  入 : --------------------------------------
+     * 输  出 : {"errNum":1,"retMsg":"提示信息","retData":"数据"}
+     * 创  建 : 2018/07/16 18:47
+     */
+    public function applyCreate()
+    {
+        // 获取所有申请管理员数据
+        $add = (new ApplyService())->adminAdd();
+        // 验证数据格式
+        if($add['msg']=='error') return returnResponse(1,'审核失败');
+        // 返回数据格式
+        return returnResponse(0,'审核成功',true);
+    }
 }
