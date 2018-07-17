@@ -59,6 +59,7 @@ Route::group('v1/right_module/', function(){
      * 传值方式：GET， 功能：获取管理员可管理权限接口
      * 传值方式：GET， 功能：获取所有权限管理列表数据
      * 传值方式：GET， 功能：获取所有申请管理员数据
+     * 传值方式: PUT  功能: 审核申请管理员数据
      */
     Route::get(
         'obtain_module',

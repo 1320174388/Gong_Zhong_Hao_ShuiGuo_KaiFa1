@@ -62,14 +62,16 @@ class ApplyService
      * 名  称 : adminAdd()
      * 功  能 : 添加管理员表数据
      * 变  量 : --------------------------------------
-     * 输  入 : --------------------------------------
-     * 输  出 : --------------------------------------
+     * 输  入 : (String) $applyToken => '身份令牌';
+     * 输  入 : (Array) $roleIndex  => '职位数组';
+     * 输  出 : ['msg'=>'success','data'=>true]
+     * 输  出 : ['msg'=>'error'  ,'data'=>false]
      * 创  建 : 2018/07/16 19:06
      */
-    public function adminAdd()
+    public function adminAdd($applyToken,$roleIndex)
     {
         // 添加管理员表数据
-        $add = (new AdminDao())->adminCreate();
+        $add = (new AdminDao())->adminCreate($applyToken,$roleIndex);
         // 验证数据格式
         if($add['msg']=='error') return returnData('error');
         // 返回数据
